@@ -1,6 +1,6 @@
 # karpool-web
 
-> A Vue.js web frontend for Karpool App
+> frontend ting
 
 ## Build Setup
 

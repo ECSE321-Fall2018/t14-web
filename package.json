@@ -1,8 +1,8 @@
 {
   "name": "karpool-web",
   "version": "1.0.0",
-  "description": "A Vue.js web frontend for Karpool App",
-  "author": "MassivaM <hamlimassy@hotmail.com>",
+  "description": "frontend ting",
+  "author": "ajaypatel24 <35381714+ajaypatel24@users.noreply.github.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
