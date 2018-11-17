@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <test></test>
+    
     <img src="./assets/shoe.png"/>
+    <router-link to="active">Active</router-link>
+    <router-link to="ranking">Ranking</router-link>
     <router-view/>
   </div>
 </template>
