@@ -5,16 +5,20 @@
     <router-link to="active">Active</router-link>
     <router-link to="ranking">Ranking</router-link>
     <router-view/>
+    <Nav>
+      
+
+    </Nav>
   </div>
 </template>
 
 <script>
-import Test from './components/test'
+import Nav from './components/nav'
 import Hello from './components/HelloWorld'
 export default {
   name: 'App',
   components: {
-    Hello
+    'Nav': Nav
   }
 }
 </script>
