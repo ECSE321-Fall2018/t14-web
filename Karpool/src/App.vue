@@ -2,11 +2,12 @@
   <div id="app">
 
 
-    <router-view/>
+    
     
 
     <navbar> <!-- simple nav -->
       
+     
       <router-link to="/">Home</router-link>
       <router-link to="/active">Status</router-link>
       <router-link to="/">Overview</router-link>
@@ -21,12 +22,10 @@
 </template>
 
 <script>
-import Nav from './components/nav'
+
 export default {
   name: 'App',
-  components: {
-    'Nav': Nav
-  }
+  
 }
 </script>
 
@@ -43,26 +42,32 @@ export default {
   width: 50%;
 }
 
-nav {
-    overflow: hidden;
+navbar {
+    overflow: auto;
     background-color: #333;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 10%;
+    font-weight: 600;
+    
+
 }
 
-/* Links inside the navbar */
-nav a {
+
+navbar a {
     float: left;
-    display: block;
+    display: inline-block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 18px; 
     text-decoration: none;
+    font-size: 17px;
 }
 
-/* Change background on mouse-over */
-nav a:hover {
+
+navbar a:hover {
     background: #ddd;
     color: black;
 }
