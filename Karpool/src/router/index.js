@@ -5,6 +5,7 @@ import HelloWorld from '@/components/HelloWorld'
 import ranking from '@/components/Ranking'
 import active from '@/components/Active'
 import about from '@/components/About'
+import test from '@/components/test'
 
 
 
@@ -33,6 +34,11 @@ export default new Router({
       path: '/About',
       name: 'about',
       component: about
-    }
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: test
+    },
   ]
 })

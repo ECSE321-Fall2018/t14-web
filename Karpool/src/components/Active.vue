@@ -1,23 +1,28 @@
+import {axios} from './http-common.js'
+
 <template>
 <div class = "Active">
 
 
 	<form @submit.prevent="addSkill">
 	<input type="text" placeholder="enter name" v-model="name">
+	<ul>
+	
+		<li>{{name}}</li>
+		<li><button @click="">Backend call</button></li>
+
+	</ul>
 	
 	</form>
 
-	<ul>
-		<li v-for="(data,index) in skills" :key='index'>{{data.skill}}</li>
-		<li>{{name}}</li>
-		<li>ni</li>
-	</ul>
+	
 
 	<h1>This page will display the active drivers passengers and routes</h1>
 	{{name}}
 	
 </div>
 </template>
+
 
 <script>
 	export default {
@@ -28,17 +33,16 @@
 				{"name":"bob"},
 				{"name":"petu"}
 				]
+				console.log("hi");
 
-			}
-		},
-		methods: {
-			addSkill() {
-				this.skills.push({skill: this.skill})
-				this.skill = '';
 			}
 		}
 	}
+	
+  
+	
 </script>
+<script src="./registration.js"></script>
 
 <style scoped>
 h1 {
