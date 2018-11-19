@@ -72,9 +72,9 @@
         </a>
       </li>
       <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
+        <a href=
+          "./Ranking"
+          
         >
           awesome-vue
         </a>
