@@ -2,7 +2,9 @@
 <div class = "nav">
 	<h1>Navigation</h1>
 	<nav>
-		<router-link to="/active">Active</router-link>
+		<router-link v-for="routes in links" 
+      v-bind:key="routes.id"
+      :to="`${routes.page}`">{{routes.text}}</router-link>
 	</nav>
 </div>
 </template>
@@ -16,8 +18,18 @@
 				links: [
 				{
 					id:0,
-					text: 'yyet',
+					text: 'Active',
 					page:'/Active'
+				},
+				{
+					id:1,
+					text: 'Ranking',
+					page: '/Ranking'
+				},
+				{
+					id:2,
+					text: 'HelloWorld',
+					page: '/HelloWorld'
 				}
 				]
 			}

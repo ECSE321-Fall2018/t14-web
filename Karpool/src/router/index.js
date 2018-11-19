@@ -26,6 +26,11 @@ export default new Router({
       path: '/ranking',
       name: 'ranking',
       component: ranking
+    },
+    {
+      path: '/HelloWorld',
+      name: 'hello',
+      component: HelloWorld
     }
   ]
 })

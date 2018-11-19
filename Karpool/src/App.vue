@@ -4,6 +4,7 @@
     <img src="./assets/shoe.png"/>
     <router-link to="active">Active</router-link>
     <router-link to="ranking">Ranking</router-link>
+    <router-link to="HelloWorld">Hello</router-link>
     <router-view/>
     <Nav>
       
@@ -14,7 +15,6 @@
 
 <script>
 import Nav from './components/nav'
-import Hello from './components/HelloWorld'
 export default {
   name: 'App',
   components: {
