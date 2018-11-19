@@ -9,7 +9,7 @@ import {axios} from './http-common.js'
 	<ul>
 	
 		<li>{{name}}</li>
-		<li><button @click="">Backend call</button></li>
+		<li><button @click="created">Backend call</button></li>
 
 	</ul>
 	
