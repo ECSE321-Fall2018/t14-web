@@ -10,11 +10,11 @@
      
       <router-link to="/">Home</router-link>
       <router-link to="/Active">Drivers</router-link>
-      <router-link to="/ActivePassengers">Passengers</router-link>
-      <router-link to="/">Overview</router-link>
+      <router-link to="/Active2">Passengers</router-link>
+      <router-link to="/">Routes</router-link>
       <router-link to="/ranking">Ranking</router-link>
       <router-link to="/About">About</router-link>
-      <router-link to="/Active2">ron</router-link>
+      <router-link to="/ActivePassengers">ron</router-link>
     
     </navbar>
 
