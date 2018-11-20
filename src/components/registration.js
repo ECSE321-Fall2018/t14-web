@@ -13,8 +13,8 @@ function EventDto (name, date, start, end) {
 import axios from 'axios'
 var config = require('../../config')
 
-var frontendUrl = 'http://' + config.dev.host + ':' + config.dev.port
-var backendUrl = 'http://jsonplaceholder.typicode.com/posts'
+var frontendUrl = 'http://karpool-14.herokuapp.com'
+var backendUrl = 'karpool-spring-14.herokuapp.com'
 
 var AXIOS = axios.create({
   baseURL: backendUrl,
