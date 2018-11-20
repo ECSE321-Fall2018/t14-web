@@ -27,35 +27,14 @@ import {axios} from './http-common.js'
 <script>
 	export default {
 		name: 'Active'
-		data() {
-			return {
-				name: '',
-				names: [
-				{"name":"bob"},
-				{"name":"petu"}
-				]
-				console.log("hi");
-
-			}
-		},
-		methods: {
-			post: function(){
-				this.$http.post("http://jsonplaceholder.typicode.com/posts", {
-					title: this.blog.title,
-					body: this.blog.content,
-					userId: 1
-				}).then (function(data) {
-					console.log(data);
-				});
-
-			}
 		}
-	}
+			
 	
   
 	
 </script>
-<script src="./registration.js"></script>
+
+/*<script src="./registration.js"></script>*/
 
 <style scoped>
 h1 {
