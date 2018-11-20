@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import activepassengers from '@/component/ActivePassengers'
+import active2 from '@/components/active2'
 import ranking from '@/components/Ranking'
 import active from '@/components/Active'
 import about from '@/components/About'
 import test from '@/components/test'
+
 
 
 
@@ -21,10 +22,10 @@ export default new Router({
       component: active
     },
     {
-      path: '/ActivePassengers',//:name/:working',
-      name: 'activepassengers',
+      path: '/active2',//:name/:working',
+      name: 'active2',
       //props: true,
-      component: activepassengers
+      component: active2
     },
     {
       path: '/ranking',
