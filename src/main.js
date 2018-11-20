@@ -7,12 +7,16 @@ import VueAxios from 'vue-axios'
 import VueResource from 'vue-resource'
 
 
+
 Vue.use(VueResource)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  data: {
+
+  },
   router,
   components: { App },
   template: '<App/>'

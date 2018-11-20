@@ -48,9 +48,18 @@ export default {
       lookupStartingZip: function() {
         //this.newParticipant = "Found";
         var vm = this
-        axios.get('https://karpool-spring-14.herokuapp.com/passengers/' + vm.newParticipant)
+        //axios.get('https://karpool-spring-14.herokuapp.com/passengers/' + vm.newParticipant)
+        axios.get('https://karpool-spring-14.herokuapp.com/trips/all')
         .then(function (response) {
-          vm.newParticipant = response.data.email + ", " + response.data.phoneNumber
+          var arr = response[0]
+          console.log("wack")
+          console.log(response)
+
+          vm.participantExist = response.status
+
+          
+        
+          //vm.newParticipant = response.data.destination
           
         })
         .catch(function (error) {
