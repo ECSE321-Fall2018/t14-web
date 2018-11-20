@@ -9,7 +9,8 @@
       
      
       <router-link to="/">Home</router-link>
-      <router-link to="/Active">Status</router-link>
+      <router-link to="/Active">Drivers</router-link>
+      <router-link to="/ActivePassengers">Passengers</router-link>
       <router-link to="/">Overview</router-link>
       <router-link to="/ranking">Ranking</router-link>
       <router-link to="/About">About</router-link>
