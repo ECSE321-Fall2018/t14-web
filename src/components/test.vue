@@ -8,7 +8,7 @@
       </tr>
       <tr>
           <td>
-              <input type="text" placeholder="Participant Name">
+              <input type="text" placeholder="Participant Name" v-model="participantExist">
           </td>
           <td>
               <button>Create</button>
@@ -35,11 +35,12 @@
         <input type="text" v-model="newParticipant" placeholder="Participant Name">
     </td>
     <td>
-        <button @click="created()" >Create Participant</button>
+        <button @click="lookupStartingZip()" >Create Participant</button>
     </td>
   </tr>
 </table>
 <span v-if="errorParticipant" style="color:red">Error: {{errorParticipant}} </span>
+<span>{{errorParticipant}}</span>
 
     <p>
       <span style="color:red">Error: Message text comes here</span>
@@ -56,3 +57,7 @@
 </style>
 
 <script src="./registration.js"></script>
+
+
+
+

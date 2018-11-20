@@ -29,20 +29,45 @@ export default {
     return {
       participants: [],
       newParticipant: '',
+      participantExist: '',
       errorParticipant: '',
       response: []
     }
   },
-  created: function () {
-  AXIOS.get('http://jsonplaceholder.typicode.com/posts')
-    .then(response => {
-      // JSON responses are automatically parsed.
-      console.log(response.data[0]);
-    })
-    .catch(e => {
-      this.errorParticipant = e;
-    });
-}
+
+  watch : {
+      newParticipant: function() {
+        
+        if (this.newParticipant.length > 10) {
+          this.lookupParticipant()
+        }
+
+      }
+    },
+    methods: {
+      lookupStartingZip: function() {
+        //this.newParticipant = "Found";
+        var vm = this
+        axios.get('https://karpool-spring-14.herokuapp.com/passengers/' + vm.newParticipant)
+        .then(function (response) {
+          vm.newParticipant = response.data.email + ", " + response.data.phoneNumber
+          
+        })
+        .catch(function (error) {
+          vm.participantExist = "invalid"
+        })
+      } 
+
+
+
+    },
+
+
+  }
+  
+
+
+
 /*
 methods: {
   createParticipant: function (participantName) {
@@ -65,4 +90,4 @@ methods: {
 
   }
   */
-}
+
