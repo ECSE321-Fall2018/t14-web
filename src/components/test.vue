@@ -35,7 +35,7 @@
         <input type="text" v-model="newParticipant" placeholder="Participant Name">
     </td>
     <td>
-        <button @click="createParticipant(newParticipant)" >Create Participant</button>
+        <button @click="created()" >Create Participant</button>
     </td>
   </tr>
 </table>

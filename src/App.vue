@@ -9,10 +9,11 @@
       
      
       <router-link to="/">Home</router-link>
-      <router-link to="/active">Status</router-link>
+      <router-link to="/Active">Status</router-link>
       <router-link to="/">Overview</router-link>
       <router-link to="/ranking">Ranking</router-link>
-      <router-link to="/about">About</router-link>
+      <router-link to="/About">About</router-link>
+      <router-link to="/ron">ron</router-link>
     
     </navbar>
 

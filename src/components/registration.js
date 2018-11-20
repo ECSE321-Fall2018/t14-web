@@ -14,7 +14,7 @@ import axios from 'axios'
 var config = require('../../config')
 
 var frontendUrl = 'http://' + config.dev.host + ':' + config.dev.port
-var backendUrl = 'http://eventregistration-backend-123.herokuapp.com/participants'
+var backendUrl = 'http://jsonplaceholder.typicode.com/posts'
 
 var AXIOS = axios.create({
   baseURL: backendUrl,
@@ -34,18 +34,19 @@ export default {
     }
   },
   created: function () {
-  AXIOS.get(`/participants`)
+  AXIOS.get('http://jsonplaceholder.typicode.com/posts')
     .then(response => {
       // JSON responses are automatically parsed.
-      this.participants = response.data
+      console.log(response.data[0]);
     })
     .catch(e => {
       this.errorParticipant = e;
     });
-},
+}
+/*
 methods: {
   createParticipant: function (participantName) {
-  AXIOS.post(`/participants/`+participantName, {}, {})
+  AXIOS.post(''+participantName, {}, {})
   .then(response => {
     // JSON responses are automatically parsed.
     this.participants.push(response.data)
@@ -58,5 +59,10 @@ methods: {
     this.errorParticipant = errorMsg
   });
 }
-}
+
+
+
+
+  }
+  */
 }

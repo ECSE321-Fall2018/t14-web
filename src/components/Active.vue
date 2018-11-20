@@ -9,7 +9,7 @@ import {axios} from './http-common.js'
 	<ul>
 	
 		<li>{{name}}</li>
-		<li><button @click="created">Backend call</button></li>
+		<li><button @click="get">Backend call</button></li>
 
 	</ul>
 	
@@ -26,6 +26,7 @@ import {axios} from './http-common.js'
 
 <script>
 	export default {
+		name: 'Active'
 		data() {
 			return {
 				name: '',
@@ -34,6 +35,18 @@ import {axios} from './http-common.js'
 				{"name":"petu"}
 				]
 				console.log("hi");
+
+			}
+		},
+		methods: {
+			post: function(){
+				this.$http.post("http://jsonplaceholder.typicode.com/posts", {
+					title: this.blog.title,
+					body: this.blog.content,
+					userId: 1
+				}).then (function(data) {
+					console.log(data);
+				});
 
 			}
 		}

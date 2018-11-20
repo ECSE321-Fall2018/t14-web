@@ -7,4 +7,8 @@
 	</div>
 </template>
 
-<script src="./registration.js"></script>
+<script>
+	export default {
+		name:'About'
+	}
+</script>

@@ -15,7 +15,7 @@ export default new Router({
   routes: [
     
     {
-      path: '/',//:name/:working',
+      path: '/Active',//:name/:working',
       name: 'active',
       //props: true,
       component: active
@@ -39,6 +39,7 @@ export default new Router({
       path: '/test',
       name: 'test',
       component: test
-    },
+    }
+    
   ]
 })
