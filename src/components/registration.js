@@ -43,8 +43,10 @@ export default {
         }
 
       }
-    },
+    }
+    /*
     methods: {
+
       lookupStartingZip: function() {
         //this.newParticipant = "Found";
         var vm = this
@@ -70,7 +72,7 @@ export default {
 
 
     },
-
+*/
 
   }
   
