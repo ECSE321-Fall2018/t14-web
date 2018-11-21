@@ -31,6 +31,7 @@ export default {
       newParticipant: '',
       participantExist: '',
       errorParticipant: [],
+      activeDrivers: [],
       response: []
     }
   },
@@ -73,6 +74,24 @@ getTrips: function () {
         if (response.data[i].tripComplete == true) {
         vm.errorParticipant.push(response.data[i].tripId)
         }
+      }
+
+      
+    })
+    .catch(e => {
+      vm.errorParticipant = e;
+    });
+},
+getDrivers: function () {
+  // Initializing participants from backend
+    var vm = this
+    
+    axios.get('https://karpool-spring-14.herokuapp.com/drivers/all')
+    .then(response => {
+      for (var i = 0; i < response.data.length; i++) {
+        
+        vm.activeDrivers.push(response.data[i].name)
+        
       }
 
       

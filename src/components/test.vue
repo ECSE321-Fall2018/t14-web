@@ -35,11 +35,11 @@
         <input type="text" v-model="newParticipant" placeholder="Participant Name">
     </td>
     <td>
-        <button v-on:click="getTrips()">Create Participant</button>
+        <button v-on:click="getDrivers()">Create Participant</button>
     </td>
   </tr>
 </table>
-<span v-if="errorParticipant" style="color:red">{{errorParticipant}} </span>
+<span v-if="activeDrivers" style="color:red">{{activeDrivers}} </span>
 
 
     <p>
