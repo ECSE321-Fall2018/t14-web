@@ -38,15 +38,15 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #D3D0DB;
+  margin-top: 200px;
   
   width: 50%;
 }
 
 navbar {
     overflow: auto;
-    background-color: #333;
+    background-color: #343434;
     position: fixed; 
     top: 0; 
     left: 0;
@@ -59,13 +59,13 @@ navbar {
 
 
 navbar a {
-    float: left;
+    float: right;
     display: inline-block;
-    color: #f2f2f2;
+    color: #f1f1f1;
     text-align: center;
-    padding: 14px 18px; 
+    padding: 14px 14px; 
     text-decoration: none;
-    font-size: 20px;
+    font-size: 26px;
 }
 
 
