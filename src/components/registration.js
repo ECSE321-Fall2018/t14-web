@@ -31,6 +31,7 @@ export default {
       newParticipant: '',
       participantExist: '',
       errorParticipant: [],
+      activeTrips: [],
       activeDrivers: [],
       response: []
     }
@@ -72,7 +73,7 @@ getTrips: function () {
     .then(response => {
       for (var i = 0; i < response.data.length; i++) {
         if (response.data[i].tripComplete == true) {
-        vm.errorParticipant.push(response.data[i].tripId)
+        vm.activeTrips.push(response.data[i].tripId)
         }
       }
 

@@ -3,8 +3,12 @@
 	
 	<div class="about">
 		<h1>About us</h1>
-		<p>yeet</p>
+        <input type="text" v-model="newParticipant" placeholder="Participant Name">
+        <button v-on:click="getTrips()">Create Participant</button>
+	<span v-if="activeTrips" style="color:red">{{activeTrips}} </span>
 	</div>
+
+
 </template>
 
 <script>
@@ -12,3 +16,5 @@
 		name:'About'
 	}
 </script>
+
+<script src="./registration.js"></script>
