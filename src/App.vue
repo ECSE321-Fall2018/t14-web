@@ -14,7 +14,7 @@
       <router-link to="/">Routes</router-link>
       <router-link to="/ranking">Ranking</router-link>
       <router-link to="/About">About</router-link>
-      <router-link to="/ActivePassengers">ron</router-link>
+      
     
     </navbar>
 

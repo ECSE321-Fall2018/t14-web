@@ -9,6 +9,7 @@
 		name:'Ranking'
 	}
 </script>
+<script src="./registration.js"></script>
 
 <style scoped>
 h1 {
