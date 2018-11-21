@@ -42,9 +42,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #D3D0DB;
-  margin-top: 200px;
+  position: fixed;
+  top: 20%;
+  left: 38%;
+    text-decoration: none;
+    font-size: 50px;
+
   
-  width: 50%;
+  
+  
 }
 
 navbar {
@@ -76,6 +82,7 @@ navbar a:hover {
     background: #ddd;
     color: black;
 }
+
 
 
 
