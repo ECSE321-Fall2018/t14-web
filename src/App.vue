@@ -34,7 +34,7 @@ export default {
 <style>
 #app {
   
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -65,7 +65,7 @@ navbar a {
     text-align: center;
     padding: 14px 18px; 
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 
