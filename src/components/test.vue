@@ -35,15 +35,15 @@
         <input type="text" v-model="newParticipant" placeholder="Participant Name">
     </td>
     <td>
-        <button @click="lookupStartingZip()" >Create Participant</button>
+        <button v-on:click="getTrips()">Create Participant</button>
     </td>
   </tr>
 </table>
-<span v-if="errorParticipant" style="color:red">Error: {{errorParticipant}} </span>
-<span>{{errorParticipant}}</span>
+<span v-if="errorParticipant" style="color:red">{{errorParticipant}} </span>
+
 
     <p>
-      <span style="color:red">Error: Message text comes here</span>
+      <span style="color:red"></span>
     </p>
   </div>
 </template>
