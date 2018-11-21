@@ -11,7 +11,7 @@
       <router-link to="/">Home</router-link>
       <router-link to="/Active">Drivers</router-link>
       <router-link to="/Active2">Passengers</router-link>
-      <router-link to="/">Routes</router-link>
+      <router-link to="/test">Routes</router-link>
       <router-link to="/ranking">Ranking</router-link>
       <router-link to="/About">About</router-link>
       

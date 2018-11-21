@@ -39,7 +39,7 @@
     </td>
   </tr>
 </table>
-<span v-if="activeDrivers" style="color:red">{{activeDrivers}} </span>
+<span v-if="activeDrivers" style="color:red">{{activeDrivers}}</span>
 
 
     <p>
@@ -57,6 +57,12 @@
 </style>
 
 <script src="./registration.js"></script>
+
+<script>
+  export default {
+    name: 'test'
+  }
+</script>
 
 
 
