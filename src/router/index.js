@@ -10,6 +10,7 @@ import test from '@/components/test'
 
 
 
+
 Vue.use(Router)
 //array of routes that page goes to on click of button
 export default new Router({
@@ -47,6 +48,7 @@ export default new Router({
       name: 'test',
       component: test
     }
+    
     
   ]
 })

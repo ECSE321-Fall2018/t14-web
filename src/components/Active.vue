@@ -34,7 +34,8 @@ import {axios} from './http-common.js'
 	
 </script>
 
-/*<script src="./registration.js"></script>*/
+
+<script src="./registration.js"></script>
 
 <style scoped>
 h1 {

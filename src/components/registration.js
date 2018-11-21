@@ -37,7 +37,7 @@ export default {
     }
   },
 
-  watch : {
+  watch: {
       newParticipant: function() {
         
         if (this.newParticipant.length > 10) {
@@ -56,7 +56,8 @@ methods: {
     .then(response => {
       for (var i = 0; i < response.data.length; i++) {
         vm.errorParticipant.push(response.data[i].name)
-        
+
+
       }
 
       

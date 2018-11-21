@@ -17,7 +17,7 @@
     </table>
     <table>
   <tr v-for="participant in participants" >
-      <td>{{ participant.name }}</td>
+      <td>{{participant.name}}</td>
       <td>
         <ul>
           <li v-for="event in participant.events">
