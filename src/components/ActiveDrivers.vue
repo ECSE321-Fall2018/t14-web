@@ -33,6 +33,7 @@
 <template>
 
 <div id="main">
+	
 <input type="text" v-model="search"/>   
 <button v-on:click="filteredCustomers(getCustomers())">List Current Active Drivers</button>
 <span v-for="customer in customers">{{customer.name}}</span>
