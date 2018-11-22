@@ -6,12 +6,12 @@
 
 		<input type="text" placeholder="none">
 		<button v-on:click="getDrivers()">List Current Active Drivers</button>
-		<input type="button" value="Refresh Page" onClick="makeUL(activeDrivers)">
+		<input type="button" value="Refresh Page" >
 		<span v-if="activeDrivers">{{activeDrivers}}</span>
 
 		<ul id="tags">
-			<li v-repeat="tags">
-				{{$activeDrivers}}
+			<li v-for="driver in activeDrivers">
+				{{driver}}
 			</li>
 		</ul>
 
