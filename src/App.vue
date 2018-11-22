@@ -5,22 +5,16 @@
     
     
 
-    <navbar> <!-- simple nav -->
-      
-     <router-link to="/About">About</router-link>
-       <router-link to="/ranking">Ranking</router-link>
-        <router-link to="/test">Routes</router-link>
-        <router-link to="/Active2">Passengers</router-link>
-          <router-link to="/Active">Drivers</router-link>
-
-     
-     
-
-      
-    
+    <navbar> <!-- simple nav -->  
+    <router-link to="/About">About</router-link>
+    <router-link to="/UserRanking">Ranking</router-link>
+    <router-link to="/test">Routes</router-link>
+    <router-link to="/Active2">Passengers</router-link>
+    <router-link to="/ActiveDrivers">Active</router-link>
+    <router-link to="/loading">yeet</router-link>
     </navbar>
 
-    <router-view/>
+    <router-view></router-view>
 
   </div>
 </template>
@@ -28,7 +22,9 @@
 <script>
 
 export default {
+  
   name: 'App',
+  
   
 }
 </script>

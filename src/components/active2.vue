@@ -1,5 +1,5 @@
 <template>
-	<div class="activepassengers">
+	<div class="active2">
 		<h1>passengers</h1>
 		<input type="text" v-model="search" size="60" style="width: 500px; height: 40px;" 
 		placeholder="search active passengers..."  />

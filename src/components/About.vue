@@ -1,20 +1,21 @@
 <template>
-
+<!--style="color:red-->
 	
-	<div class="about">
-		<h1>About us</h1>
-        <input type="text" v-model="newParticipant" placeholder="Participant Name">
+	<div class="Overview">
+		<h1>Overview of Passengers and Drivers</h1>
+		<p style="color:pink"> we r a mess :) </p>
+        <input type="text" placeholder="Participant Name">
         <button v-on:click="getTrips()">List Trips</button>
-        <p style="white-space: pre-line;">Active Trips</p>
-		<span v-if="activeTrips" style="color:red">{{activeTrips}} </span>
+        <p>Active Trips</p>
 
-        <input type="text" v-model="newPassenger" placeholder="Participant Name">
-        <button v-on:click="getDrivers()">List Drivers</button>
-		<span v-if="activeDrivers" style="color:red">{{activeDrivers}} </span>
 
-		<span>Multiline message is:</span>
-		<textarea v-model="message" placeholder="add multiple lines"></textarea>
-	<p style="white-space: pre-line;">{{message}}</p>
+		<span v-if="activeTrips">{{activeTrips}} </span>
+
+
+
+
+        
+		
 	<br>
 
 
@@ -24,10 +25,7 @@
 
 </template>
 
-<script>
-	export default {
-		name:'About'
-	}
-</script>
+<script src='../javascript/trips.js'></script>
 
-<script src="./registration.js"></script>
+
+

@@ -2,10 +2,15 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import active2 from '@/components/active2'
-import ranking from '@/components/Ranking'
-import active from '@/components/Active'
+
+
 import about from '@/components/About'
 import test from '@/components/test'
+import yeet from '@/components/yeet'
+
+import ActiveDrivers from '@/components/ActiveDrivers'
+import UserRanking from '@/components/UserRanking'
+import loading from '@/components/loading'
 
 
 
@@ -17,10 +22,10 @@ export default new Router({
   routes: [
     
     {
-      path: '/Active',//:name/:working',
-      name: 'active',
+      path: '/ActiveDrivers',//:name/:working',
+      name: 'ActiveDrivers',
       //props: true,
-      component: active
+      component: ActiveDrivers
     },
     {
       path: '/active2',//:name/:working',
@@ -29,9 +34,9 @@ export default new Router({
       component: active2
     },
     {
-      path: '/ranking',
-      name: 'ranking',
-      component: ranking
+      path: '/UserRanking',
+      name: 'UserRanking',
+      component: UserRanking
     },
     {
       path: '/HelloWorld',
@@ -47,6 +52,16 @@ export default new Router({
       path: '/test',
       name: 'test',
       component: test
+    },
+    {
+      path: '/yeet',
+      name: 'yeet',
+      component: yeet
+    },
+    {
+      path: '/loading',
+      name: 'loading',
+      component: loading
     }
     
     

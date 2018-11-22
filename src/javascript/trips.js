@@ -1,71 +1,33 @@
-function ParticipantDto (name) {
-  this.name = name
-  this.events = []
-}
 
-function EventDto (name, date, start, end) {
-  this.name = name
-  this.eventDate = date
-  this.startTime = start
-  this.endTime = end
-}
 
 import axios from 'axios'
 var config = require('../../config')
 
-var frontendUrl = 'http://' + config.dev.host + ':' + config.dev.port
-var backendUrl = 'http://' + config.dev.backendHost + ':' + config.dev.backendPort
+//var frontendUrl = 'http://' + config.dev.host + ':' + config.dev.port
+//var backendUrl = 'http://' + config.dev.backendHost + ':' + config.dev.backendPort
 
-var AXIOS = axios.create({
-  baseURL: 'https://ziptasticapi.com/90210',
-  headers: { 'Access-Control-Allow-Origin': 'https://karpool-spring-14.herokuapp.com/passengers/all'}
+var Axios = axios.create({
+
+  baseURL: 'https://karpool-spring-14.herokuapp.com/',
+  headers: { 'Access-Control-Allow-Origin': 'localhost:8087/#/ActiveDrivers'}
+  
 })
 
 
 
 export default {
-  name: 'eventregistration',
+  
   data () {
     return {
-      participants: [],
-      newParticipant: '',
-      participantExist: '',
-      errorParticipant: [],
-      activeTrips: [],
-      activeDrivers: [],
+      activeTrips: ["Active Trips: "],
+      activeDrivers: ["Active Drivers: "],
       response: []
     }
   },
 
-  watch: {
-      newParticipant: function() {
-        
-        if (this.newParticipant.length > 10) {
-          this.lookupParticipant()
-        }
-
-      }
-    },
 
 methods: {
-  created: function () {
-  // Initializing participants from backend
-    var vm = this
-
-    axios.get('https://karpool-spring-14.herokuapp.com/passengers/all')
-    .then(response => {
-      for (var i = 0; i < response.data.length; i++) {
-        vm.errorParticipant.push(response.data[i].name)
-
-
-      }
-
-      
-    })
-    .catch(e => {
-      vm.errorParticipant = e;
-    });
-},
+  
 getTrips: function () {
   // Initializing participants from backend
     var vm = this
@@ -74,7 +36,7 @@ getTrips: function () {
     .then(response => {
       for (var i = 0; i < response.data.length; i++) {
         if (response.data[i].tripComplete == true) {
-        vm.activeTrips.push(response.data[i].tripId)
+        vm.activeTrips.push(["tripID: "+ response.data[i].tripId, "trip Price: " + response.data[i].price])
         }
       }
 
@@ -90,6 +52,9 @@ getDrivers: function () {
     
     axios.get('https://karpool-spring-14.herokuapp.com/drivers/all')
     .then(response => {
+      if (vm.activeDrivers.length > 0) {
+        vm.activeDrivers = []
+      }
       for (var i = 0; i < response.data.length; i++) {
         
         vm.activeDrivers.push(response.data[i].name)
