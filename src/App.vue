@@ -43,7 +43,7 @@ export default {
   color: #D3D0DB;
   position: fixed;
   top: 20%;
-  left: 38%;
+  left: 36%;
     text-decoration: none;
     font-size: 50px;
     
