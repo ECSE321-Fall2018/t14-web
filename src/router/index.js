@@ -12,6 +12,8 @@ import ActiveDrivers from '@/components/ActiveDrivers'
 import UserRanking from '@/components/UserRanking'
 import loading from '@/components/loading'
 
+import search from '@/components/search'
+
 
 
 
@@ -62,6 +64,11 @@ export default new Router({
       path: '/loading',
       name: 'loading',
       component: loading
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: search
     }
     
     

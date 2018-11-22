@@ -19,9 +19,13 @@ export default {
   
   data () {
     return {
+      search: '',
       activeTrips: ["Active Trips: "],
-      activeDrivers: ["Active Drivers: "],
-      response: []
+      activeTripsPrice: ["Price: "],
+      activeDrivers: [],
+      tripDestination: [],
+      response: [],
+      customers: []
     }
   },
 
@@ -31,12 +35,16 @@ methods: {
 getTrips: function () {
   // Initializing participants from backend
     var vm = this
-    
+    if (vm.activeTrips.length > 0) {
+      vm.activeTrips = [];
+      vm.activeTripsPrice = [];
+    }
     axios.get('https://karpool-spring-14.herokuapp.com/trips/all')
     .then(response => {
       for (var i = 0; i < response.data.length; i++) {
         if (response.data[i].tripComplete == true) {
-        vm.activeTrips.push(["tripID: "+ response.data[i].tripId, "trip Price: " + response.data[i].price])
+        vm.activeTrips.push(response.data[i].destination)
+        vm.activeTripsPrice.push(response.data[i].price)
         }
       }
 
@@ -46,18 +54,18 @@ getTrips: function () {
       vm.errorParticipant = e;
     });
 },
-getDrivers: function () {
+getCustomers: function () {
   // Initializing participants from backend
     var vm = this
     
     axios.get('https://karpool-spring-14.herokuapp.com/drivers/all')
     .then(response => {
-      if (vm.activeDrivers.length > 0) {
-        vm.activeDrivers = []
+      if (vm.customers.length > 0) {
+        vm.customers = []
       }
       for (var i = 0; i < response.data.length; i++) {
         
-        vm.activeDrivers.push(response.data[i].name)
+        vm.customers.push(response.data[i])
         
       }
 
@@ -66,7 +74,43 @@ getDrivers: function () {
     .catch(e => {
       vm.errorParticipant = e;
     });
-}
+},
+getDestination: function () {
+  // Initializing participants from backend
+    var vm = this
+    
+    axios.get('https://karpool-spring-14.herokuapp.com/drivers/all')
+    .then(response => {
+      if (vm.tripDestination.length > 0) {
+        vm.tripDestination = []
+      }
+      for (var i = 0; i < response.data.length; i++) {
+        
+        vm.tripDestination.push(response.data[i].destination)
+        
+      }
+
+      
+    })
+    .catch(e => {
+      vm.errorParticipant = e;
+    });
+},
+
+    filteredCustomers: function(customers)
+    {
+    
+    
+         
+       return customers.filter(function(cust){return cust.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;});
+       //return this.customers;
+    }
+       //return this.customers;
+    
+
+
+
+
 /*
 createParticipant: function (participantName) {
   AXIOS.post(`/participants/`+participantName, {}, {})

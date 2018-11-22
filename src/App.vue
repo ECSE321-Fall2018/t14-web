@@ -15,6 +15,7 @@
     <router-link to="/Active2">Passengers</router-link>
     <router-link to="/ActiveDrivers">Active</router-link>
     <router-link to="/loading">yeet</router-link>
+    <router-link to="/search">search</router-link>
     </navbar>
 
     <router-view></router-view>
