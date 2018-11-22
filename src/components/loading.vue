@@ -4,10 +4,11 @@ import App from '../App.vue'
 
 <div class="loading">
 	<div class="logo">
+		<router-link to="/About">About</router-link>
 
 		KAR<span style="color:darkturquoise;">POOL</span>
 		<p style="font-size: 20px"> ride sharing service </p>
-		<button>Enter</button>
+		<button onclick="" style="display: none;">proceed</button>
 	</div>
 	<div class="loader-frame">
 
@@ -25,7 +26,9 @@ import App from '../App.vue'
 
 
 <style>
-
+button {
+	z-index: 200;
+}
 .loading {
 	width: 100%;
 	height:100%;
@@ -90,26 +93,7 @@ import App from '../App.vue'
 
 </style>
 
+
 <script>
-	
-(function() {
-	var loading = document.getElementById("loading");
-	var loading = 0;
-	var id = setInterval(frame, 64);
-
-	function frame() {
-		if (loading == 100) {
-			clearInterval(id);
-			window.open(App, "_self");
-		} else {
-			loading = loading + 1;
-			if (loading == 90) {
-				loading.style.animation = "fadeout 1s ease";
-			}
-		}
-	}
-})();
-
-
 
 </script>

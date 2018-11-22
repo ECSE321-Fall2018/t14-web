@@ -62,11 +62,14 @@ getDrivers: function () {
       }
 
       
+
+      
     })
     .catch(e => {
       vm.errorParticipant = e;
     });
-}
+},
+
 /*
 createParticipant: function (participantName) {
   AXIOS.post(`/participants/`+participantName, {}, {})
