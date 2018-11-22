@@ -1,4 +1,7 @@
+
 <template>
+
+
   <div id="app">
 
 
@@ -29,10 +32,18 @@ export default {
 }
 </script>
 
+
+@font-face { 
+    src: url(fonts/BebasNeue Regular.otf/)
+    font-family: Bebas Neue;
+}
+
 <style>
 #app {
+
+    
   
-  font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
+  font-family: Bebas Neue;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
