@@ -1,3 +1,5 @@
+import App from '../App.vue'
+
 <template>
 
 <div class="loading">
@@ -5,6 +7,7 @@
 
 		KAR<span style="color:darkturquoise;">POOL</span>
 		<p style="font-size: 20px"> ride sharing service </p>
+		<button>Enter</button>
 	</div>
 	<div class="loader-frame">
 
@@ -76,9 +79,37 @@
 	from {transform: rotate(0deg);}
 	to {transform: rotate(-360deg);}
 }
+@keyframes fadeout {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
 
 
 
 
 
 </style>
+
+<script>
+	
+(function() {
+	var loading = document.getElementById("loading");
+	var loading = 0;
+	var id = setInterval(frame, 64);
+
+	function frame() {
+		if (loading == 100) {
+			clearInterval(id);
+			window.open(App, "_self");
+		} else {
+			loading = loading + 1;
+			if (loading == 90) {
+				loading.style.animation = "fadeout 1s ease";
+			}
+		}
+	}
+})();
+
+
+
+</script>
