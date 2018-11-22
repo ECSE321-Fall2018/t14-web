@@ -46,10 +46,32 @@ export default {
   left: 38%;
     text-decoration: none;
     font-size: 50px;
+    
+
+    
+
 
   
   
-  
+}
+
+input[type="text"] {
+    font-size:25px;
+    box-shadow: none;
+    background: transparent;
+            border-top: transparent !important;
+            border-left: transparent !important;
+            border-right: transparent !important;
+            border-bottom: 2px solid !important;
+   font-weight: 200;
+        color: #a5b1c2;
+            padding-left: 0;
+}
+input:focus {
+    outline:none !important;
+}
+input search{
+  width: 200px;
 }
 
 navbar {
