@@ -10,6 +10,7 @@ import yeet from '@/components/yeet'
 
 import ActiveDrivers from '@/components/ActiveDrivers'
 import UserRanking from '@/components/UserRanking'
+import loading from '@/components/loading'
 
 
 
@@ -56,6 +57,11 @@ export default new Router({
       path: '/yeet',
       name: 'yeet',
       component: yeet
+    },
+    {
+      path: '/loading',
+      name: 'loading',
+      component: loading
     }
     
     
