@@ -1,5 +1,5 @@
 <template>
-  <div id="eventregistration">
+  <div id="tester">
     <h2>Participants</h2>
     <table>
       <tr>
@@ -8,7 +8,7 @@
       </tr>
       <tr>
           <td>
-              <input type="text" placeholder="Participant Name" v-model="participantExist">
+              <input type="text" placeholder="Participant Name" >
           </td>
           <td>
               <button>Create</button>
@@ -32,14 +32,14 @@
   <!-- Table with dynamic content -->
   <tr>
     <td>
-        <input type="text" v-model="newParticipant" placeholder="Participant Name">
+        <input type="text" placeholder="Participant Name">
     </td>
     <td>
         <button v-on:click="getDrivers()">Create Participant</button>
     </td>
   </tr>
 </table>
-<span v-if="activeDrivers" style="color:red">{{activeDrivers}}</span>
+<span v-if="activeDrivers">{{activeDrivers}}</span>
 
 
     <p>
@@ -49,7 +49,7 @@
 </template>
 
 <style>
-  #eventregistration {
+  #tester{
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     color: #2c3e50;
     background: #f2ece8;

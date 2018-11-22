@@ -1,5 +1,5 @@
 <template>
-	<div class="activepassengers">
+	<div class="active2">
 		<h1>passengers</h1>
 		<hr>
 	</div>
