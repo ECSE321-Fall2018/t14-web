@@ -30,6 +30,7 @@ export default {
   },
 
 
+
 methods: {
   
 getTrips: function () {
@@ -54,6 +55,28 @@ getTrips: function () {
       vm.errorParticipant = e;
     });
 },
+
+getDestination: function () {
+  // Initializing participants from backend
+    var vm = this
+    
+    axios.get('https://karpool-spring-14.herokuapp.com/drivers/all')
+    .then(response => {
+      if (vm.tripDestination.length > 0) {
+        vm.tripDestination = []
+      }
+      for (var i = 0; i < response.data.length; i++) {
+        
+        vm.tripDestination.push(response.data[i].destination)
+        
+      }
+
+      
+    })
+    .catch(e => {
+      vm.errorParticipant = e;
+    });
+},
 getTopDrivers: function () {
   // Initializing participants from backend
     var vm = this
@@ -70,27 +93,6 @@ getTopDrivers: function () {
       }
 
       
-
-      
-    })
-    .catch(e => {
-      vm.errorParticipant = e;
-    });
-},
-getDestination: function () {
-  // Initializing participants from backend
-    var vm = this
-    
-    axios.get('https://karpool-spring-14.herokuapp.com/drivers/all')
-    .then(response => {
-      if (vm.tripDestination.length > 0) {
-        vm.tripDestination = []
-      }
-      for (var i = 0; i < response.data.length; i++) {
-        
-        vm.tripDestination.push(response.data[i].destination)
-        
-      }
 
       
     })

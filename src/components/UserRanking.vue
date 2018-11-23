@@ -5,6 +5,7 @@
 	<input type="text" v-model="search"/>   
 	<button v-on:click="getTopDrivers()">List Current Active Drivers</button>
 	<!--
+		getTopDrivers()
 	<ul>
 	<li v-for="driver in activeDrivers">
 			{{driver.email}}</li>
@@ -13,8 +14,44 @@
 	<input type="radio" name="gender" id="female"> Female<br>
 	<input type="radio" name="gender" value="other"> Other
 	<button v-on:click =" check()">yeet</button>
+	<img src="../img/armystars/gifrating.gif">
 	
 	<table id="customers">
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Phone</th>
+		<th>trips</th>
+		<th>some</th>
+	</tr>
+	<tr v-for="driver in activeDrivers">
+		<td>{{driver.name}}</td>
+		<td>{{driver.email}}</td>
+		<td>{{driver.phoneNumber}}</td>
+		<td>{{driver.trips}}</td>
+
+	</tr>
+	<br>
+	</table>
+
+	<table id="yeet" style="display: inline-block;">
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Phone</th>
+		<th>trips</th>
+		<th>some</th>
+	</tr>
+	<tr v-for="driver in activeDrivers">
+		<td>{{driver.name}}</td>
+		<td>{{driver.email}}</td>
+		<td>{{driver.phoneNumber}}</td>
+		<td>{{driver.trips}}</td>
+
+	</tr>
+	</table>
+	<br>
+	<table id="doggo" style="float: right;">
 	<tr>
 		<th>Name</th>
 		<th>Email</th>
@@ -63,6 +100,16 @@
     background-color: #4CAF50;
     color: white;
 }
+
+img {
+  background-image: url('../img/armystars/gifrating.gif');
+    background-size: 38%;
+     background-position: top;
+   background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 </style>
 
 <script>

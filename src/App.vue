@@ -78,13 +78,9 @@ export default {
 
 body{
 
-background-image: url('../image/SVG/gifrating.gif');
-    background-size: 38%;
-     background-position: top;
-   background-attachment: fixed;
-    background-position: center;
+
     align-content: center;
-    background-repeat: no-repeat;
+    
     font-family: Arial, Helvetica, sans-serif; 
     font-size: 18px;
 
@@ -130,10 +126,7 @@ navbar {
 
 }
 
-UserRanking
-{
-    
-}
+
 
 
 navbar a {
@@ -152,10 +145,6 @@ navbar a:hover {
     color: black;
 }
 
-.center {
-   
-    
-}
 
 
 

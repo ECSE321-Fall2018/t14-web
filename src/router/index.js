@@ -6,7 +6,7 @@ import active2 from '@/components/active2'
 
 import about from '@/components/About'
 import test from '@/components/test'
-import yeet from '@/components/yeet'
+
 
 import ActiveDrivers from '@/components/ActiveDrivers'
 import UserRanking from '@/components/UserRanking'
@@ -55,11 +55,6 @@ export default new Router({
       path: '/test',
       name: 'test',
       component: test
-    },
-    {
-      path: '/yeet',
-      name: 'yeet',
-      component: yeet
     },
     {
       path: '/loading',
