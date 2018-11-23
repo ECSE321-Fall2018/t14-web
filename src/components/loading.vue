@@ -6,7 +6,7 @@ import App from '../App.vue'
 	<div class="logo">
 		
 		<img src="../img/logo.png"/>
-		KAR<span >PÖÖL</span>
+		KAR<span>PÖÖL</span>
 		
 		<p style="font-size: 20px"> wesh poto </p>
 		
@@ -38,7 +38,7 @@ button {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 500;
 }
 .logo {
 	widows: 300px;

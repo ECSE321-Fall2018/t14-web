@@ -12,7 +12,7 @@
     <router-link to="/main">Main</router-link>
     <router-link to="/UserRanking">Ranking</router-link>
     <router-link to="/ActiveParticipants">Active</router-link>
-    <router-link to="/"><div class="icon"><img src="./img/navbarlogo.png" ></div></router-link>
+    
    
     
     </navbar>
@@ -117,9 +117,9 @@ navbar {
     top: 0; 
     left: 0;
     width: 100%; 
-    height: 50px;
+    height: 11%;
     font-weight: 600;
-    
+    z-index: 100;
 
 }
 
@@ -142,10 +142,6 @@ navbar a:hover {
     color: black;
 }
 
-img {
-  width: 35px;
-  height: 35px;
-}
 
 
 

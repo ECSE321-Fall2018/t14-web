@@ -7,6 +7,7 @@
   	
   	<b-table striped hover: items="activeDrivers"></b-table>
 	
+<div class="DriverTable">
 	<table id="customers" >
 		<caption>TOP RANKED DRIVERS</caption>
 	<tr>
@@ -23,7 +24,9 @@
 	</tr>
 	<br>
 	</table>
+</div>
 
+<div class="PassengerTable">
 	<table id="customers" style="margin-top: 75%;">
 		<caption>TOP RANKED PASSENGERS</caption>
 	<tr>
@@ -40,7 +43,10 @@
 		
 	</tr>
 	</table>
+</div>
 
+
+<div class="RouteTable">
 	<table id="customers" style="margin-left:150%;">
 		<caption>TOP RANKED ROUTES</caption>
 	<tr>
@@ -56,6 +62,7 @@
 	</tr>
 	</table>
 	<br>
+</div>
 
 
 	
@@ -66,39 +73,34 @@
 
 <style>
 	
+.DriverTable {
+	position: absolute;
+top: 50%;
+left: 50%;
+}
 
-#customers{
+.PassengerTable {
+	position: absolute;
+top: 50%;
+left: 50%;
+
+
+	}
+
+.RouteTable {
 	
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+position: absolute;
+top: 8px;
+left: -700px;
+
+
 }
 
-#customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
 
-#customers tr:hover {background-color: #ddd;}
 
-#customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #0652DD;
-    color: white;
-}
 
-img {
-  background-image: url('../img/armystars/gifrating.gif');
-    background-size: 38%;
-     background-position: top;
-   background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+
 
 </style>
 
