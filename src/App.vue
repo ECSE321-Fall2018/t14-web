@@ -11,7 +11,6 @@
     <navbar> <!-- simple nav -->  
     <router-link to="/main">Main</router-link>
     <router-link to="/UserRanking">Ranking</router-link>
-    <router-link to="/Routes">Routes</router-link>
     <router-link to="/ActiveParticipants">Active</router-link>
     
     </navbar>

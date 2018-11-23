@@ -21,6 +21,7 @@ export default {
     return {
       search: '',
       search2: '',
+      search3: '',
       activeTrips: [],
       activeDrivers: [],
       activePassengers: [],
@@ -32,28 +33,6 @@ export default {
 
 methods: {
   
-getTrips: function () {
-  // Initializing participants from backend
-    var vm = this
-    if (vm.activeTrips.length > 0) {
-      vm.activeTrips = [];
-      vm.activeTripsPrice = [];
-    }
-    Axios.get('https://karpool-spring-14.herokuapp.com/trips/all')
-    .then(response => {
-      for (var i = 0; i < response.data.length; i++) {
-        if (response.data[i].tripComplete == true) {
-        vm.activeTrips.push(response.data[i].destination)
-        vm.activeTripsPrice.push(response.data[i].price)
-        }
-      }
-
-      
-    })
-    .catch(e => {
-      vm.errorParticipant = e;
-    });
-},
 getDrivers: function () {
   // Initializing participants from backend
     var vm = this
@@ -101,6 +80,26 @@ getPassengers: function () {
     });
 },
 
+getOpenTrips: function () {
+  // Initializing participants from backend
+    var vm = this
+    if (vm.activeTrips.length > 0) {
+      vm.activeTrips = [];
+    }
+    Axios.get('/trips/open/all')
+    .then(response => {
+      for (var i = 0; i < response.data.length; i++) {
+        vm.activeTrips.push(response.data[i])
+      }
+        
+      })
+    .catch(e => {
+      vm.errorParticipant = e;
+    });
+
+}
+
+},
 
 
 
@@ -128,7 +127,7 @@ createParticipant: function (participantName) {
   });
   */
 
-},
+
 computed:
 {
   
@@ -143,13 +142,20 @@ computed:
          var self=this;
        return this.activePassengers.filter(function(cust){return cust.name.toLowerCase().indexOf(self.search2.toLowerCase())>=0;});
        //return this.customers;
-    }
+    },
+    filteredTrips: function()
+    {
+         var self=this;
+       return this.activeTrips.filter(function(cust){return cust.destination.toLowerCase().indexOf(self.search2.toLowerCase())>=0;});
+       //return this.customers;
+    },
     
 },
 
 beforeMount () {
   this.getDrivers()
   this.getPassengers()
+  this.getOpenTrips();
 }
 
  /*

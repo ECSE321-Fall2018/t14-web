@@ -14,7 +14,7 @@ import loading from '@/components/loading'
 
 import search from '@/components/search'
 import main from '@/components/main'
-import ActiveRoutes from '@/components/ActiveRoutes'
+
 
 
 
@@ -62,11 +62,7 @@ export default new Router({
       name: 'loading',
       component: loading
     },
-    {
-      path: '/Routes',
-      name: 'ActiveRoutes',
-      component: ActiveRoutes
-    },
+
     {
       path: '/main',
       name: 'main',

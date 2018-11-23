@@ -54,6 +54,7 @@ getOpenTrips: function () {
 
 computed:
 { //2 simple filters to allow searching of passengers and drivers 
+  /*
   
     filteredTrips: function()
     {
@@ -62,7 +63,8 @@ computed:
        //return this.customers;
     },
   },
-
+*/
+},
 beforeMount () {
   this.getOpenTrips()
 }

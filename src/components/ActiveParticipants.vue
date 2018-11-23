@@ -5,7 +5,9 @@
 
 	Filter: <input type="text" id="filter" placeholder="Search Drivers" v-model="search"/>   
 
-	Filter: <input type="text" id="filter2" placeholder="Search Passengers" v-model="search2"/>   
+	Filter: <input type="text" id="filter2" placeholder="Search Passengers" v-model="search2"/>
+
+	Filter: <input type="text" id="filter3" placeholder="Search trips" v-model="search3"/>     
 	
 
 	<table id="customers">
@@ -42,6 +44,29 @@
 
 	</tr>
 	</table>
+
+	<table id="customers" style="margin-top: 50%">
+			<caption>ACTIVE TRIPS</caption>
+		<tr>
+	<!--	<th>Driver</th> -->
+		<th>Trip ID</th>
+		<th>Location</th>
+		<th>Destination</th>
+		<th>Depart Date</th>
+		<th>Depart Time</th>
+		</tr>
+		<tr v-for="trip in filteredTrips">
+		<!-- <td>{{trip.driver}}</td> -->
+		<td>{{trip.tripId}}</td>
+		<td>{{trip.departureLocation}}</td>
+		<td>{{trip.destination}}</td>
+		<td>{{trip.departureDate}}
+		<td>{{trip.departureTime}}</td>
+
+
+		</tr>
+		</table>
+
 
 	
 

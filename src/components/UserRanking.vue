@@ -16,7 +16,7 @@
 		<th>trips</th>
 		
 	</tr>
-	<tr v-for="customer in FilteredDriver">
+	<tr v-for="customer in filteredDriver">
 		<td>{{customer.name}}</td>
 		<td>{{customer.email}}</td>
 		<td>{{customer.phoneNumber}}</td>
@@ -59,24 +59,6 @@
 	</table>
 	<br>
 
-	<!-- 
-	<table id="customers" style="display: inline-block;">
-	<tr>
-		<th>Name</th>
-		<th>Email</th>
-		<th>Phone</th>
-		<th>trips</th>
-		<th>some</th>
-	</tr>
-	<tr v-for="driver in activeDrivers">
-		<td>{{driver.name}}</td>
-		<td>{{driver.email}}</td>
-		<td>{{driver.phoneNumber}}</td>
-		<td>{{driver.trips}}</td>
-
-	</tr>
-	</table>
--->
 
 	
 	
