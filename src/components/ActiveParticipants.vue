@@ -3,6 +3,14 @@
 
 <div id="main">
 
+<!--
+	<b-alert show>Default Alert</b-alert>
+	 <b-alert variant="success" show>Success Alert</b-alert>
+	-->
+
+<b-table striped hover :items="items"></b-table>
+
+
 	Filter: <input type="text" id="filter" placeholder="Search Drivers" v-model="search"/>   
 
 	
@@ -26,6 +34,8 @@
 
 	</tr>
 	</table>
+
+
 
 
 <table id="customers" style="margin-left:150%;" >
@@ -113,14 +123,20 @@
 
 
 <script>
-	
+
 
 	export default {
-		name: "ActiveDrivers"
+		data () {
+			
+		}
+		
 	}
+	
 
 </script>
 <script>
+
+
 	
 </script>
 

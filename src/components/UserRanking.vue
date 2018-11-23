@@ -4,7 +4,8 @@
 
 	 
 	<h1>Rankings</h1>
-  
+  	
+  	<b-table striped hover: items="activeDrivers"></b-table>
 	
 	<table id="customers" >
 		<caption>TOP RANKED DRIVERS</caption>

@@ -10,10 +10,10 @@ import App from '../App.vue'
 		
 		<p style="font-size: 20px"> ride sharing service </p>
 		
-		<button onclick="" style="display: none;">proceed</button>
+		<b-btn variant="primary" href="#/main">ENTER</b-btn>
 	</div>
 	<div class="loader-frame">
-		<router-link to="/main" style="font-size: 10px">O</router-link>
+		
 		<div class="loader1" id="loader1"></div>
 		<div class="loader12" id="loader12"></div>
 	</div>

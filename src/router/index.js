@@ -15,6 +15,8 @@ import loading from '@/components/loading'
 import search from '@/components/search'
 import main from '@/components/main'
 
+import carou from '@/components/carou'
+
 
 
 
@@ -58,6 +60,11 @@ export default new Router({
       path: '/main',
       name: 'main',
       component: main
+    },
+    {
+      path: '/carou',
+      name: 'carou',
+      component: carou
     }
     
     
