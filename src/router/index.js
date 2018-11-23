@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import active2 from '@/components/active2'
+
 
 
 import about from '@/components/About'
@@ -31,12 +31,7 @@ export default new Router({
       //props: true,
       component: ActiveParticipants
     },
-    {
-      path: '/active2',//:name/:working',
-      name: 'active2',
-      //props: true,
-      component: active2
-    },
+
     {
       path: '/UserRanking',
       name: 'UserRanking',

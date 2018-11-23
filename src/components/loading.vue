@@ -13,7 +13,7 @@ import App from '../App.vue'
 		<button onclick="" style="display: none;">proceed</button>
 	</div>
 	<div class="loader-frame">
-		<router-link to="/main" style="font-size: 10px">ENTER</router-link>
+		<router-link to="/main" style="font-size: 10px">O</router-link>
 		<div class="loader1" id="loader1"></div>
 		<div class="loader12" id="loader12"></div>
 	</div>
@@ -64,6 +64,10 @@ img {
 span {
 	text-align: center;
 	color:darkturquoise;
+}
+
+router-link {
+	color: black;
 }
 /*
 .loader1, .loader {
