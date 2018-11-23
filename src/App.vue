@@ -46,20 +46,21 @@ export default {
   font-family: Bebas Neue;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: left;
+  text-align: center;
   color: #D3D0DB;
 
   position: absolute; 
   top: 25%;
+  left: 30%;
 
   
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
 
     
 
   position: absolute;
-  top: 25%;
+  top: 10%;
     text-decoration: none;
 
 }
@@ -78,7 +79,7 @@ body{
     align-content: center;
     
     font-family: Arial, Helvetica, sans-serif; 
-    font-size: 18px;
+    font-size: 14px;
 
 
     
@@ -89,7 +90,7 @@ body{
 
 
 input[type="text"] {
-    font-size:25px;
+    font-size:20px;
     box-shadow: none;
     background: transparent;
             border-top: transparent !important;

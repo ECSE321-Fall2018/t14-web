@@ -2,20 +2,10 @@
 
 <div id="main">
 
-	<input type="text" v-model="search"/>   
-	
-	<!--
-		getTopDrivers()
-	<ul>
-	<li v-for="driver in activeDrivers">
-			{{driver.email}}</li>
-	</ul>
-<input type="radio" name="gender" id="male"> Male<br>
-	<input type="radio" name="gender" id="female"> Female<br>
-	<input type="radio" name="gender" value="other"> Other
-	<button v-on:click =" check()">yeet</button>
--->
-	<!-- <img src="../img/armystars/gifrating.gif"> -->
+	 
+	<h1>Rankings</h1>
+<input type="text" v-model="search" size="60" style="width: 500px; height: 40px;" 
+		placeholder="top user..."  />  
 	
 	<table id="customers" >
 		<caption>TOP RANKED DRIVERS</caption>
@@ -117,7 +107,7 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #4CAF50;
+    background-color: #0652DD;
     color: white;
 }
 

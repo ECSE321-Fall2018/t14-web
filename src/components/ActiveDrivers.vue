@@ -57,14 +57,15 @@
 
 #customers {
 	position: absolute;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
 
 #customers td, #customers th {
-    border: 1px solid #ddd;
+    border: transparent;
     padding: 8px;
+    line-height: 100px;
 }
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
@@ -72,11 +73,13 @@
 #customers tr:hover {background-color: #ddd;}
 
 #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    background-color: #0652DD;
+    border: none;
+   color: white;
+   font-size: 20px;
 }
 </style>
 

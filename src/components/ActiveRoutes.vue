@@ -56,7 +56,7 @@
 	position: absolute;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 60%;
 }
 
 #customers td, #customers th {
@@ -69,11 +69,12 @@
 #customers tr:hover {background-color: #ddd;}
 
 #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    background-color: #0652DD;
     color: white;
+    font-size: 10px;
 }
 
 </style>
