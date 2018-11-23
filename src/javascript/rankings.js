@@ -163,6 +163,10 @@ createParticipant: function (participantName) {
   });
   */
 
+},
+beforeMount () {
+  this.getTopPassengers()
+  this.getTopDrivers()
 }
     /*
     methods: {

@@ -3,8 +3,7 @@
 	
 	<div class="Overview">
 		<!-- <h1>Overview of Passengers and Drivers</h1> -->
-		<p style="color:pink"> we r a mess :) </p>
-
+		
 
 
         <input type="text" placeholder="Participant Name">

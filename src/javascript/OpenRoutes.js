@@ -50,5 +50,8 @@ getOpenTrips: function () {
     });
 
 }
+},
+beforeMount () {
+  this.getOpenTrips()
 }
 }

@@ -9,7 +9,7 @@
     
 
     <navbar> <!-- simple nav -->  
-    
+    <router-link to="/main">Main</router-link>
     <router-link to="/UserRanking">Ranking</router-link>
     <router-link to="/Routes">Routes</router-link>
     <router-link to="/Active2">Passengers</router-link>

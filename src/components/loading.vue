@@ -4,14 +4,14 @@ import App from '../App.vue'
 
 <div class="loading">
 	<div class="logo">
-		<router-link to="/main">About</router-link>
+		
 
 		KAR<span style="color:darkturquoise;">POOL</span>
 		<p style="font-size: 20px"> ride sharing service </p>
 		<button onclick="" style="display: none;">proceed</button>
 	</div>
 	<div class="loader-frame">
-
+		<router-link to="/main" style="font-size: 10px">enter site</router-link>
 		<div class="loader1" id="loader1"></div>
 		<div class="loader12" id="loader12"></div>
 	</div>

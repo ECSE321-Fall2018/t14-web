@@ -1,6 +1,6 @@
 
-import axios from 'axios'
 
+import axios from 'axios'
 var config = require('../../config')
 
 //var frontendUrl = 'http://' + config.dev.host + ':' + config.dev.port
@@ -9,7 +9,7 @@ var config = require('../../config')
 var Axios = axios.create({
 
   baseURL: 'https://karpool-spring-14.herokuapp.com/',
-  headers: { 'Access-Control-Allow-Origin': 'localhost:8087/'}
+  headers: { 'Access-Control-Allow-Origin': 'localhost:8087/#/ActiveDrivers'}
   
 })
 
@@ -19,13 +19,9 @@ export default {
   
   data () {
     return {
-      search: '',
       activeTrips: ["Active Trips: "],
-      activeTripsPrice: ["Price: "],
-      activeDrivers: [],
-      tripDestination: [],
-      response: [],
-      customers: []
+      activeDrivers: ["Active Drivers: "],
+      response: []
     }
   },
 
@@ -35,16 +31,12 @@ methods: {
 getTrips: function () {
   // Initializing participants from backend
     var vm = this
-    if (vm.activeTrips.length > 0) {
-      vm.activeTrips = [];
-      vm.activeTripsPrice = [];
-    }
-    Axios.get('https://karpool-spring-14.herokuapp.com/trips/all')
+    
+    axios.get('https://karpool-spring-14.herokuapp.com/trips/all')
     .then(response => {
       for (var i = 0; i < response.data.length; i++) {
         if (response.data[i].tripComplete == true) {
-        vm.activeTrips.push(response.data[i].destination)
-        vm.activeTripsPrice.push(response.data[i].price)
+        vm.activeTrips.push(["tripID: "+ response.data[i].tripId, "trip Price: " + response.data[i].price])
         }
       }
 
@@ -58,37 +50,11 @@ getDrivers: function () {
   // Initializing participants from backend
     var vm = this
     
-    Axios.get('/drivers/active/all')
-    .then(response => {
-      if (vm.activeDrivers.length > 0) {
-          vm.activeDrivers = []
-      }
-      for (var i = 0; i < response.data.length; i++) {
-        
-        vm.activeDrivers.push(response.data[i])
-        
-      }
-
-      
-
-      
-    })
-    .catch(e => {
-      vm.errorParticipant = e;
-    });
-},
-getDestination: function () {
-  // Initializing participants from backend
-    var vm = this
-    
     axios.get('https://karpool-spring-14.herokuapp.com/drivers/all')
     .then(response => {
-      if (vm.tripDestination.length > 0) {
-        vm.tripDestination = []
-      }
       for (var i = 0; i < response.data.length; i++) {
         
-        vm.tripDestination.push(response.data[i].destination)
+        vm.activeDrivers.push(response.data[i].name)
         
       }
 
@@ -97,25 +63,7 @@ getDestination: function () {
     .catch(e => {
       vm.errorParticipant = e;
     });
-},
-
-
-
-
-
-    check: function(){
-      
-    document.getElementById("male").checked = true;
-    },
-    uncheck: function() {
-    document.getElementById("female").checked = false;
-    }
-       //return this.customers;
-    
-
-
-
-
+}
 /*
 createParticipant: function (participantName) {
   AXIOS.post(`/participants/`+participantName, {}, {})
@@ -132,13 +80,8 @@ createParticipant: function (participantName) {
   });
   */
 
-},
-
-beforeMount () {
-  this.getDrivers()
 }
-
- /*
+    /*
     methods: {
 
       lookupStartingZip: function() {

@@ -17,7 +17,8 @@
 -->
 	<!-- <img src="../img/armystars/gifrating.gif"> -->
 	
-	<table id="customers">
+	<table id="customers" >
+		<caption>TOP RANKED DRIVERS</caption>
 	<tr>
 		<th>Name</th>
 		<th>Email</th>
@@ -35,7 +36,8 @@
 	<br>
 	</table>
 
-	<table id="customers" style="display: inline-block;">
+	<table id="customers" style="margin-top: 50%;">
+		<caption>TOP RANKED PASSENGERS</caption>
 	<tr>
 		<th>Name</th>
 		<th>Email</th>
@@ -48,6 +50,21 @@
 		<td>{{passenger.email}}</td>
 		<td>{{passenger.phoneNumber}}</td>
 		
+	</tr>
+	</table>
+
+	<table id="customers" style="margin-left:150%;">
+		<caption>TOP RANKED ROUTES</caption>
+	<tr>
+		<th>Destination</th>
+		<th>Frequency</th>
+		
+		
+		
+	</tr>
+	<tr v-for="passenger in activePassengers">
+		<td>{{passenger.name}}</td>
+		<td>{{passenger.email}}</td>
 	</tr>
 	</table>
 	<br>
@@ -71,7 +88,7 @@
 	</table>
 -->
 
-	<span>yeeeeeeet</span>
+	
 	
 </div>
 
@@ -81,7 +98,7 @@
 	
 
 #customers{
-	position: absolute;
+	
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
