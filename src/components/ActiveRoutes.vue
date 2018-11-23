@@ -76,7 +76,7 @@
     padding-top: 5px;
     padding-bottom: 5px;
     text-align: center;
-    background-color: #4CAF50;
+    background-color: #0652DD;
     color: white;
 	font-size: 10px
 }

@@ -69,14 +69,14 @@
 #customers tr:hover {background-color: #ddd;}
 
 #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #ffff;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    background-color: #0652DD;
 	border: none;
 
-    color: #a5b1c2;
-	font-size: 38px;
+    color: white;
+	font-size: 20px;
 }
 </style>
 
