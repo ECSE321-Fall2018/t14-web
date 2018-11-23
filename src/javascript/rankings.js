@@ -81,6 +81,29 @@ getTopPassengers: function () {
       vm.errorParticipant = e;
     });
 },
+getTopDestinations: function () {
+  // Initializing participants from backend
+    var vm = this
+    
+    Axios.get('trips/destinations/top3')
+    .then(response => {
+      if (vm.activePassengers.length > 0) {
+          vm.activePassengers = []
+      }
+      for (var i = 0; i < response.data.length; i++) {
+        
+        vm.activePassengers.push(response.data[i])
+        
+      }
+
+      
+
+      
+    })
+    .catch(e => {
+      vm.errorParticipant = e;
+    });
+},
 
     filteredPassenger: function()
     {
