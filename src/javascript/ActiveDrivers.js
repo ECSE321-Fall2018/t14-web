@@ -20,12 +20,12 @@ export default {
   data () {
     return {
       search: '',
-      activeTrips: ["Active Trips: "],
-      activeTripsPrice: ["Price: "],
+      search2: '',
+      activeTrips: [],
       activeDrivers: [],
-      tripDestination: [],
+      activePassengers: [],
       response: [],
-      customers: []
+      
     }
   },
 
@@ -77,20 +77,22 @@ getDrivers: function () {
       vm.errorParticipant = e;
     });
 },
-getDestination: function () {
+getPassengers: function () {
   // Initializing participants from backend
     var vm = this
     
-    axios.get('https://karpool-spring-14.herokuapp.com/drivers/all')
+    Axios.get('/passengers/active/all')
     .then(response => {
-      if (vm.tripDestination.length > 0) {
-        vm.tripDestination = []
+      if (vm.activePassengers.length > 0) {
+          vm.activePassengers = []
       }
       for (var i = 0; i < response.data.length; i++) {
         
-        vm.tripDestination.push(response.data[i].destination)
+        vm.activePassengers.push(response.data[i])
         
       }
+
+      
 
       
     })
@@ -103,13 +105,7 @@ getDestination: function () {
 
 
 
-    check: function(){
-      
-    document.getElementById("male").checked = true;
-    },
-    uncheck: function() {
-    document.getElementById("female").checked = false;
-    }
+   
        //return this.customers;
     
 
@@ -133,9 +129,27 @@ createParticipant: function (participantName) {
   */
 
 },
+computed:
+{
+  
+    filteredCustomers:function()
+    {
+         var self=this;
+       return this.activeDrivers.filter(function(cust){return cust.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;});
+       //return this.customers;
+    },
+    filteredPassengers:function()
+    {
+         var self=this;
+       return this.activePassengers.filter(function(cust){return cust.name.toLowerCase().indexOf(self.search2.toLowerCase())>=0;});
+       //return this.customers;
+    }
+    
+},
 
 beforeMount () {
   this.getDrivers()
+  this.getPassengers()
 }
 
  /*

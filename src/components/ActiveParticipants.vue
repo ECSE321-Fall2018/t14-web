@@ -3,9 +3,9 @@
 
 <div id="main">
 
-	Filter: <input type="text" id="filter" v-model="search"/>   
+	Filter: <input type="text" id="filter" placeholder="Search Drivers" v-model="search"/>   
 
-	Filter: <input type="text" id="filter2" v-model="search2"/>   
+	Filter: <input type="text" id="filter2" placeholder="Search Passengers" v-model="search2"/>   
 	
 
 	<table id="customers">

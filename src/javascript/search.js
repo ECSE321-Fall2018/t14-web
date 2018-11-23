@@ -18,46 +18,26 @@ data: function(){
         return {
         search: '',
         
-        customers: []
+        customers: [
+          { id: '1', name: 'Jhon Snow', profile_pic: 'https://i.stack.imgur.com/CE5lz.png'},
+          { id: '2', name: 'Deanerys Targarian', profile_pic: 'https://i.stack.imgur.com/CE5lz.png'},
+          { id: '3', name: 'Jaime Lanister', profile_pic: 'https://i.stack.imgur.com/CE5lz.png'},
+          { id: '4', name: 'Tyron Lanister', profile_pic: 'https://i.stack.imgur.com/CE5lz.png'}
+        ]};
 
-};
 },
 
-methods: {
-  
-getTrips: function () {
-  // Initializing participants from backend
-    var vm = this
-    
-    Axios.get('/trips/all')
-    .then(response => {
-      if (vm.customers.length > 0) {
-        vm.customers = []
-      }
-      for (var i = 0; i < response.data.length; i++) {
-        vm.customers.push(response.data[i])
-        console.log(response.data[i])
-      }
-        
-        
-        })
-      
-    .catch(e => {
-      vm.errorParticipant = e;
-    });
-  }
+created: function() {
+  console.log("yeet");
 },
-
 computed:
 {
-  
     filteredCustomers:function()
     {
          var self=this;
        return this.customers.filter(function(cust){return cust.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;});
        //return this.customers;
     }
-    
 },
 
 

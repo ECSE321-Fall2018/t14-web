@@ -8,7 +8,7 @@ import about from '@/components/About'
 
 
 
-import ActiveDrivers from '@/components/ActiveDrivers'
+import ActiveParticipants from '@/components/ActiveParticipants'
 import UserRanking from '@/components/UserRanking'
 import loading from '@/components/loading'
 
@@ -26,10 +26,10 @@ export default new Router({
   routes: [
     
     {
-      path: '/ActiveDrivers',//:name/:working',
-      name: 'ActiveDrivers',
+      path: '/ActiveParticipants',//:name/:working',
+      name: 'ActiveParticipants',
       //props: true,
-      component: ActiveDrivers
+      component: ActiveParticipants
     },
     {
       path: '/active2',//:name/:working',

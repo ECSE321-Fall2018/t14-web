@@ -51,7 +51,20 @@ getOpenTrips: function () {
 
 }
 },
+
+computed:
+{ //2 simple filters to allow searching of passengers and drivers 
+  
+    filteredTrips: function()
+    {
+         var self=this;
+       return this.activeTrips.filter(function(cust){return cust.destination.toLowerCase().indexOf(self.search.toLowerCase())>=0;});
+       //return this.customers;
+    },
+  },
+
 beforeMount () {
   this.getOpenTrips()
 }
+
 }

@@ -6,15 +6,17 @@
 		
 
 
-        <input type="text" placeholder="Participant Name">
-        <button v-on:click="getOpenTrips()">List Trips</button>
-        <p>Active Trips</p>
+        <input type="text" placeholder="Search by Destination" v-model="search"/>
+
+        
+        
 
 
 		<!-- <span v-if="activeTrips">{{activeTrips}} </span>
 		-->
 
 		<table id="customers">
+			<caption>ACTIVE TRIPS</caption>
 		<tr>
 	<!--	<th>Driver</th> -->
 		<th>Trip ID</th>
@@ -23,7 +25,7 @@
 		<th>Depart Date</th>
 		<th>Depart Time</th>
 		</tr>
-		<tr v-for="trip in activeTrips">
+		<tr v-for="trip in filteredTrips">
 		<!-- <td>{{trip.driver}}</td> -->
 		<td>{{trip.tripId}}</td>
 		<td>{{trip.departureLocation}}</td>

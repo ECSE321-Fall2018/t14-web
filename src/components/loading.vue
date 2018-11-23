@@ -5,13 +5,15 @@ import App from '../App.vue'
 <div class="loading">
 	<div class="logo">
 		
-
-		KAR<span style="color:darkturquoise;">POOL</span>
+		<img src="../img/logo.png"/>
+		KAR<span >POOL</span>
+		
 		<p style="font-size: 20px"> ride sharing service </p>
+		
 		<button onclick="" style="display: none;">proceed</button>
 	</div>
 	<div class="loader-frame">
-		<router-link to="/main" style="font-size: 10px">enter site</router-link>
+		<router-link to="/main" style="font-size: 10px">ENTER</router-link>
 		<div class="loader1" id="loader1"></div>
 		<div class="loader12" id="loader12"></div>
 	</div>
@@ -25,7 +27,7 @@ import App from '../App.vue'
 
 
 
-<style>
+<style scoped>
 button {
 	z-index: 200;
 }
@@ -42,7 +44,7 @@ button {
 	widows: 300px;
 	height: 70px;
 	margin: 150px auto 50px auto;
-	font-size: 50px;
+	font-size: 750%;
 	text-shadow: -1px 2px 2px #000;
 	text-align: center;
 	color: azure;
@@ -53,6 +55,17 @@ button {
 	margin: auto;
 	position: relative;
 }
+
+img {
+	height: 110px;
+	width: 110px;
+
+}
+span {
+	text-align: center;
+	color:darkturquoise;
+}
+/*
 .loader1, .loader {
 	position: absolute;
 	border: 5px solid transparent;
@@ -73,6 +86,7 @@ button {
 	top: 5px; left: 5px;
 	animation: anticlockwisespin 2s linear 3;
 }
+
 @keyframes clockwisespin {
 	from {transform: rotate(0deg);}
 	to {transform: rotate(360deg);}
@@ -86,6 +100,7 @@ button {
 	from {opacity: 1;}
 	to {opacity: 0;}
 }
+*/
 
 
 
@@ -95,4 +110,4 @@ button {
 
 
 <script>
-	>
+	

@@ -3,7 +3,7 @@
 <div id="main">
 
 	<input type="text" v-model="search"/>   
-	<button v-on:click="getTopDrivers(), getTopPassengers()">List Current Active Drivers</button>
+	
 	<!--
 		getTopDrivers()
 	<ul>
@@ -26,17 +26,17 @@
 		<th>trips</th>
 		
 	</tr>
-	<tr v-for="driver in activeDrivers">
-		<td>{{driver.name}}</td>
-		<td>{{driver.email}}</td>
-		<td>{{driver.phoneNumber}}</td>
-		<td>{{driver.trips}}</td>
+	<tr v-for="customer in FilteredDriver">
+		<td>{{customer.name}}</td>
+		<td>{{customer.email}}</td>
+		<td>{{customer.phoneNumber}}</td>
+		<td>{{customer.trips}}</td>
 
 	</tr>
 	<br>
 	</table>
 
-	<table id="customers" style="margin-top: 50%;">
+	<table id="customers" style="margin-top: 75%;">
 		<caption>TOP RANKED PASSENGERS</caption>
 	<tr>
 		<th>Name</th>

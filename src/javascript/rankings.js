@@ -84,12 +84,12 @@ getTopDrivers: function () {
     
     Axios.get('/drivers/top3')
     .then(response => {
-      if (vm.activeDrivers.length > 0) {
-          vm.activeDrivers = []
+      if (vm.customers.length > 0) {
+          vm.customers = []
       }
       for (var i = 0; i < response.data.length; i++) {
         
-        vm.activeDrivers.push(response.data[i])
+        vm.customers.push(response.data[i])
         
       }
 
@@ -125,7 +125,23 @@ getTopPassengers: function () {
     });
 },
 
-    filteredCustomers: function(customers)
+    filteredPassenger: function()
+    {
+    
+    
+         
+       return activePassengers.filter(function(cust){return cust.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;});
+       //return this.customers;
+    },
+    filteredDriver: function()
+    {
+    
+    
+         
+       return customers.filter(function(cust){return cust.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;});
+       //return this.customers;
+    },
+    filteredCustomers: function()
     {
     
     
