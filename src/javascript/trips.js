@@ -9,7 +9,7 @@ var config = require('../../config')
 var Axios = axios.create({
 
   baseURL: 'https://karpool-spring-14.herokuapp.com/',
-  headers: { 'Access-Control-Allow-Origin': 'localhost:8087/#/ActiveDrivers'}
+  headers: { 'Access-Control-Allow-Origin': 'localhost:8087/'}
   
 })
 
@@ -39,7 +39,7 @@ getTrips: function () {
       vm.activeTrips = [];
       vm.activeTripsPrice = [];
     }
-    axios.get('https://karpool-spring-14.herokuapp.com/trips/all')
+    Axios.get('https://karpool-spring-14.herokuapp.com/trips/all')
     .then(response => {
       for (var i = 0; i < response.data.length; i++) {
         if (response.data[i].tripComplete == true) {
@@ -54,20 +54,22 @@ getTrips: function () {
       vm.errorParticipant = e;
     });
 },
-getCustomers: function () {
+getDrivers: function () {
   // Initializing participants from backend
     var vm = this
     
-    axios.get('https://karpool-spring-14.herokuapp.com/drivers/all')
+    Axios.get('/drivers/all')
     .then(response => {
-      if (vm.customers.length > 0) {
-        vm.customers = []
+      if (vm.activeDrivers.length > 0) {
+          vm.activeDrivers = []
       }
       for (var i = 0; i < response.data.length; i++) {
         
-        vm.customers.push(response.data[i])
+        vm.activeDrivers.push(response.data[i])
         
       }
+
+      
 
       
     })
@@ -104,6 +106,16 @@ getDestination: function () {
          
        return customers.filter(function(cust){return cust.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;});
        //return this.customers;
+    },
+
+    check: function(){
+
+    if(document.getElementById("male").checked = true) {
+      return true
+    }
+    },
+    uncheck: function() {
+    document.getElementById("female").checked = false;
     }
        //return this.customers;
     

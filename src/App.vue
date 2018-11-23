@@ -19,6 +19,8 @@
     </navbar>
 
     <router-view></router-view>
+    
+  
 
   </div>
 </template>
@@ -47,13 +49,15 @@ export default {
   font-family: Bebas Neue;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: left;
   color: #D3D0DB;
-  position: fixed;
-  top: 20%;
-  left: 36%;
+  position: absolute; 
+  top: 25%;
+
+  
     text-decoration: none;
-    font-size: 50px;
+    font-size: 20px;
+
     
 
     
@@ -97,7 +101,7 @@ navbar {
 
 
 navbar a {
-    float: right;
+    float: left;
     display: inline-block;
     color: #f1f1f1;
     text-align: center;
@@ -112,6 +116,10 @@ navbar a:hover {
     color: black;
 }
 
+.center {
+   
+    
+}
 
 
 

@@ -9,7 +9,7 @@ var config = require('../../config')
 var Axios = axios.create({
 
   baseURL: 'https://karpool-spring-14.herokuapp.com/',
-  headers: { 'Access-Control-Allow-Origin': 'localhost:8087/#/ActiveDrivers'}
+  headers: { 'Access-Control-Allow-Origin': 'localhost:8087/'}
   
 })
 
@@ -32,7 +32,7 @@ getTrips: function () {
   // Initializing participants from backend
     var vm = this
     
-    axios.get('https://karpool-spring-14.herokuapp.com/trips/all')
+    Axios.get('/trips/all')
     .then(response => {
       for (var i = 0; i < response.data.length; i++) {
         if (response.data[i].tripComplete == true) {
@@ -50,7 +50,7 @@ getDrivers: function () {
   // Initializing participants from backend
     var vm = this
     
-    axios.get('https://karpool-spring-14.herokuapp.com/drivers/all')
+    Axios.get('/drivers/all')
     .then(response => {
       if (vm.activeDrivers.length > 0) {
           vm.activeDrivers = []

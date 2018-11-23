@@ -13,6 +13,7 @@ import UserRanking from '@/components/UserRanking'
 import loading from '@/components/loading'
 
 import search from '@/components/search'
+import main from '@/components/main'
 
 
 
@@ -69,6 +70,11 @@ export default new Router({
       path: '/search',
       name: 'search',
       component: search
+    },
+    {
+      path: '/',
+      name: 'main',
+      component: main
     }
     
     
