@@ -12,7 +12,6 @@ import ActiveParticipants from '@/components/ActiveParticipants'
 import UserRanking from '@/components/UserRanking'
 import loading from '@/components/loading'
 
-import search from '@/components/search'
 import main from '@/components/main'
 
 import carou from '@/components/carou'
@@ -45,11 +44,7 @@ export default new Router({
       name: 'loading',
       component: loading
     },
-    {
-      path: '/search',
-      name: 'search',
-      component: search
-    },
+
     {
       path: '/',
       name: 'loading',
