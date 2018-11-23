@@ -64,10 +64,9 @@ export default {
     
 
   position: absolute;
-  top: 19%;
-  left: 27%;
+  top: 25%;
     text-decoration: none;
-    font-size: 50px;
+    
    
 }
 
