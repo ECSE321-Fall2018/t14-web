@@ -1,9 +1,12 @@
 <template>
 
 <div id="main">
-
-	<input type="text" v-model="search"/>   
-	<button v-on:click="getTopDrivers(), getTopPassengers()">List Current Active Drivers</button>
+<h1>Rankings</h1>
+<body>See all the top passengers, drivers and destinations.</body>
+	 <input type="text" v-model="search" size="60" style="width: 500px; height: 40px;" 
+		placeholder="top user..."  />  
+	<br> 
+	<button v-on:click="getTopDrivers(), getTopPassengers()">Go</button>
 	<!--
 		getTopDrivers()
 	<ul>
