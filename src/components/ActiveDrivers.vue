@@ -1,58 +1,29 @@
-<!--
-<template>
-	
-	<div class="ActiveDrivers">
-		<h1>Active Drivers</h1>
-		<br>
-		
 
-		<table id="tags">
-			<tr v-for="driver in activeDrivers">
-				{{driver}}
-			</tr>
-		</table>
-
-		<input type="text" placeholder="none">
-		<button v-on:click="getDrivers()">List Current Active Drivers</button>
-		
-		<span v-if="activeDrivers">{{activeDrivers}}</span> 
-
-	</div>
-
-
-
-
-	</div>
-
-
-
-
-
-</template>
--->
 <template>
 
 <div id="main">
 
-	<input type="text" v-model="search"/>   
-	<button v-on:click="getDrivers()">List Current Active Drivers</button>
+	Filter: <input type="text" id="filter" v-model="search"/>   
+	
+
+	<button v-on:click="getDrivers(filter)">List Current Active Drivers</button>
 	<!--
 	<ul>
 	<li v-for="driver in activeDrivers">
 			{{driver.email}}</li>
 	</ul>
--->	<input type="radio" name="gender" id="male"> Male<br>
+<input type="radio" name="gender" id="male"> Male<br>
 	<input type="radio" name="gender" id="female"> Female<br>
 	<input type="radio" name="gender" value="other"> Other
-	<button v-on:click =" check()">yeet</button>
+	 <button v-on:click =" check()">test</button> -->
 	
 	<table id="customers">
 	<tr>
 		<th>Name</th>
 		<th>Email</th>
 		<th>Phone</th>
-		<th>trips</th>
-		<th>some</th>
+		<th>Trips</th>
+		
 	</tr>
 	<tr v-for="driver in activeDrivers">
 		<td>{{driver.name}}</td>
@@ -66,9 +37,6 @@
 
 	
 
-
-	<span>yeeeeeeet</span>
-	
 
 
 
@@ -117,5 +85,5 @@
 	
 </script>
 
-<script src="../javascript/trips.js"></script>
+<script src="../javascript/ActiveDrivers.js"></script>
 

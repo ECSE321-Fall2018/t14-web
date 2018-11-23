@@ -1,6 +1,6 @@
 
-
 import axios from 'axios'
+
 var config = require('../../config')
 
 //var frontendUrl = 'http://' + config.dev.host + ':' + config.dev.port
@@ -99,20 +99,13 @@ getDestination: function () {
     });
 },
 
-    filteredCustomers: function(customers)
-    {
-    
-    
-         
-       return customers.filter(function(cust){return cust.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;});
-       //return this.customers;
-    },
+
+
+
 
     check: function(){
-
-    if(document.getElementById("male").checked = true) {
-      return true
-    }
+      
+    document.getElementById("male").checked = true;
     },
     uncheck: function() {
     document.getElementById("female").checked = false;
@@ -139,8 +132,9 @@ createParticipant: function (participantName) {
   });
   */
 
-}
-    /*
+},
+
+ /*
     methods: {
 
       lookupStartingZip: function() {

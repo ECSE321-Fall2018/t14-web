@@ -3,18 +3,19 @@
 <div id="main">
 
 	<input type="text" v-model="search"/>   
-	<button v-on:click="getTopDrivers()">List Current Active Drivers</button>
+	<button v-on:click="getTopDrivers(), getTopPassengers()">List Current Active Drivers</button>
 	<!--
 		getTopDrivers()
 	<ul>
 	<li v-for="driver in activeDrivers">
 			{{driver.email}}</li>
 	</ul>
--->	<input type="radio" name="gender" id="male"> Male<br>
+<input type="radio" name="gender" id="male"> Male<br>
 	<input type="radio" name="gender" id="female"> Female<br>
 	<input type="radio" name="gender" value="other"> Other
 	<button v-on:click =" check()">yeet</button>
-	<img src="../img/armystars/gifrating.gif">
+-->
+	<!-- <img src="../img/armystars/gifrating.gif"> -->
 	
 	<table id="customers">
 	<tr>
@@ -22,7 +23,7 @@
 		<th>Email</th>
 		<th>Phone</th>
 		<th>trips</th>
-		<th>some</th>
+		
 	</tr>
 	<tr v-for="driver in activeDrivers">
 		<td>{{driver.name}}</td>
@@ -34,7 +35,25 @@
 	<br>
 	</table>
 
-	<table id="yeet" style="display: inline-block;">
+	<table id="customers" style="display: inline-block;">
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Phone</th>
+		
+		
+	</tr>
+	<tr v-for="passenger in activePassengers">
+		<td>{{passenger.name}}</td>
+		<td>{{passenger.email}}</td>
+		<td>{{passenger.phoneNumber}}</td>
+		
+	</tr>
+	</table>
+	<br>
+
+	<!-- 
+	<table id="customers" style="display: inline-block;">
 	<tr>
 		<th>Name</th>
 		<th>Email</th>
@@ -50,23 +69,7 @@
 
 	</tr>
 	</table>
-	<br>
-	<table id="doggo" style="float: right;">
-	<tr>
-		<th>Name</th>
-		<th>Email</th>
-		<th>Phone</th>
-		<th>trips</th>
-		<th>some</th>
-	</tr>
-	<tr v-for="driver in activeDrivers">
-		<td>{{driver.name}}</td>
-		<td>{{driver.email}}</td>
-		<td>{{driver.phoneNumber}}</td>
-		<td>{{driver.trips}}</td>
-
-	</tr>
-	</table>
+-->
 
 	<span>yeeeeeeet</span>
 	
@@ -77,7 +80,7 @@
 <style>
 	
 
-#customers {
+#customers{
 	position: absolute;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;

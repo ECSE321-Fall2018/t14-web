@@ -5,7 +5,7 @@ import active2 from '@/components/active2'
 
 
 import about from '@/components/About'
-import test from '@/components/test'
+
 
 
 import ActiveDrivers from '@/components/ActiveDrivers'
@@ -14,6 +14,7 @@ import loading from '@/components/loading'
 
 import search from '@/components/search'
 import main from '@/components/main'
+import ActiveRoutes from '@/components/ActiveRoutes'
 
 
 
@@ -52,11 +53,6 @@ export default new Router({
       component: about
     },
     {
-      path: '/test',
-      name: 'test',
-      component: test
-    },
-    {
       path: '/loading',
       name: 'loading',
       component: loading
@@ -68,6 +64,16 @@ export default new Router({
     },
     {
       path: '/',
+      name: 'loading',
+      component: loading
+    },
+    {
+      path: '/Routes',
+      name: 'ActiveRoutes',
+      component: ActiveRoutes
+    },
+    {
+      path: '/main',
       name: 'main',
       component: main
     }

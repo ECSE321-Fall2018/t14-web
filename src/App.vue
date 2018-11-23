@@ -9,13 +9,12 @@
     
 
     <navbar> <!-- simple nav -->  
-    <router-link to="/About">About</router-link>
+    
     <router-link to="/UserRanking">Ranking</router-link>
-    <router-link to="/test">Routes</router-link>
+    <router-link to="/Routes">Routes</router-link>
     <router-link to="/Active2">Passengers</router-link>
     <router-link to="/ActiveDrivers">Active</router-link>
-    <router-link to="/loading">yeet</router-link>
-    <router-link to="/search">search</router-link>
+    
     </navbar>
 
     <router-view></router-view>
@@ -36,10 +35,6 @@ export default {
 </script>
 
 
-@font-face { 
-    src: url(fonts/BebasNeue Regular.otf/)
-    font-family: Bebas Neue;
-}
 
 
 
@@ -66,9 +61,10 @@ export default {
   position: absolute;
   top: 25%;
     text-decoration: none;
-    
-   
+
 }
+   
+
 
 
 

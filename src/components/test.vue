@@ -56,7 +56,7 @@
   }
 </style>
 
-<script src="./registration.js"></script>
+
 
 <script>
   export default {

@@ -4,7 +4,7 @@ import App from '../App.vue'
 
 <div class="loading">
 	<div class="logo">
-		<router-link to="/About">About</router-link>
+		<router-link to="/main">About</router-link>
 
 		KAR<span style="color:darkturquoise;">POOL</span>
 		<p style="font-size: 20px"> ride sharing service </p>
@@ -95,5 +95,4 @@ button {
 
 
 <script>
-
-</script>
+	>

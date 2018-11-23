@@ -24,6 +24,7 @@ export default {
       activeTripsPrice: ["Price: "],
       activeDrivers: [],
       tripDestination: [],
+      activePassengers: [],
       response: [],
       customers: []
     }
@@ -89,6 +90,29 @@ getTopDrivers: function () {
       for (var i = 0; i < response.data.length; i++) {
         
         vm.activeDrivers.push(response.data[i])
+        
+      }
+
+      
+
+      
+    })
+    .catch(e => {
+      vm.errorParticipant = e;
+    });
+},
+getTopPassengers: function () {
+  // Initializing participants from backend
+    var vm = this
+    
+    Axios.get('/passengers/top3')
+    .then(response => {
+      if (vm.activePassengers.length > 0) {
+          vm.activePassengers = []
+      }
+      for (var i = 0; i < response.data.length; i++) {
+        
+        vm.activePassengers.push(response.data[i])
         
       }
 
