@@ -33,63 +33,20 @@ export default {
 
 
 methods: {
-  
-getTrips: function () {
-  // Initializing participants from backend
-    var vm = this
-    if (vm.activeTrips.length > 0) {
-      vm.activeTrips = [];
-      vm.activeTripsPrice = [];
-    }
-    Axios.get('https://karpool-spring-14.herokuapp.com/trips/all')
-    .then(response => {
-      for (var i = 0; i < response.data.length; i++) {
-        if (response.data[i].tripComplete == true) {
-        vm.activeTrips.push(response.data[i].destination)
-        vm.activeTripsPrice.push(response.data[i].price)
-        }
-      }
 
-      
-    })
-    .catch(e => {
-      vm.errorParticipant = e;
-    });
-},
-
-getDestination: function () {
-  // Initializing participants from backend
-    var vm = this
-    
-    axios.get('https://karpool-spring-14.herokuapp.com/drivers/all')
-    .then(response => {
-      if (vm.tripDestination.length > 0) {
-        vm.tripDestination = []
-      }
-      for (var i = 0; i < response.data.length; i++) {
-        
-        vm.tripDestination.push(response.data[i].destination)
-        
-      }
-
-      
-    })
-    .catch(e => {
-      vm.errorParticipant = e;
-    });
-},
 getTopDrivers: function () {
   // Initializing participants from backend
     var vm = this
     
     Axios.get('/drivers/top3')
     .then(response => {
-      if (vm.customers.length > 0) {
-          vm.customers = []
+      if (vm.activeDrivers.length > 0) {
+          vm.activeDrivers = []
       }
       for (var i = 0; i < response.data.length; i++) {
         
-        vm.customers.push(response.data[i])
+        vm.activeDrivers.push(response.data[i])
+        console.log(response.data[i])
         
       }
 

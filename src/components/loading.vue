@@ -6,7 +6,7 @@ import App from '../App.vue'
 	<div class="logo">
 		
 		<img src="../img/logo.png"/>
-		KAR<span >POOL</span>
+		KAR<span >PÖÖL</span>
 		
 		<p style="font-size: 20px"> ride sharing service </p>
 		
@@ -44,7 +44,7 @@ button {
 	widows: 300px;
 	height: 70px;
 	margin: 150px auto 50px auto;
-	font-size: 750%;
+	font-size: 175px;
 	text-shadow: -1px 2px 2px #000;
 	text-align: center;
 	color: azure;
@@ -57,8 +57,8 @@ button {
 }
 
 img {
-	height: 110px;
-	width: 110px;
+	height: 150px;
+	width: 150px;
 
 }
 span {

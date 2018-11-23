@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 
 
 
-import about from '@/components/About'
+
+
 
 
 
@@ -37,16 +37,7 @@ export default new Router({
       name: 'UserRanking',
       component: UserRanking
     },
-    {
-      path: '/HelloWorld',
-      name: 'hello',
-      component: HelloWorld
-    },
-    {
-      path: '/About',
-      name: 'about',
-      component: about
-    },
+
     {
       path: '/loading',
       name: 'loading',

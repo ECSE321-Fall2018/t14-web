@@ -4,8 +4,7 @@
 
 	 
 	<h1>Rankings</h1>
-<input type="text" v-model="search" size="60" style="width: 500px; height: 40px;" 
-		placeholder="top user..."  />  
+  
 	
 	<table id="customers" >
 		<caption>TOP RANKED DRIVERS</caption>
@@ -13,14 +12,12 @@
 		<th>Name</th>
 		<th>Email</th>
 		<th>Phone</th>
-		<th>trips</th>
 		
 	</tr>
-	<tr v-for="customer in filteredDriver">
-		<td>{{customer.name}}</td>
-		<td>{{customer.email}}</td>
-		<td>{{customer.phoneNumber}}</td>
-		<td>{{customer.trips}}</td>
+	<tr v-for="driver in activeDrivers">
+		<td>{{driver.name}}</td>
+		<td>{{driver.email}}</td>
+		<td>{{driver.phoneNumber}}</td>
 
 	</tr>
 	<br>

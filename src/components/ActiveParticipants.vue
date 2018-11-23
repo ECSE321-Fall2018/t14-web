@@ -5,9 +5,9 @@
 
 	Filter: <input type="text" id="filter" placeholder="Search Drivers" v-model="search"/>   
 
-	Filter: <input type="text" id="filter2" placeholder="Search Passengers" v-model="search2"/>
+	
 
-	Filter: <input type="text" id="filter3" placeholder="Search trips" v-model="passengersearch"/>     
+	Filter: <input type="text" id="filter3" placeholder="Search Passengers" v-model="passengersearch"/>     
 	
 
 	<table id="customers">
@@ -45,6 +45,7 @@
 	</tr>
 	</table>
 
+	Filter: <input type="text" id="filter2" placeholder="Search Trips" v-model="search2"/>
 	<table id="customers" style="margin-top: 50%">
 			<caption>ACTIVE TRIPS</caption>
 		<tr>
