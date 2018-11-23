@@ -41,6 +41,8 @@ export default {
     font-family: Bebas Neue;
 }
 
+
+
 <style>
 #app {
 
@@ -51,6 +53,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
   color: #D3D0DB;
+
   position: absolute; 
   top: 25%;
 
@@ -60,12 +63,39 @@ export default {
 
     
 
-    
-
-
-  
-  
+  position: absolute;
+  top: 19%;
+  left: 27%;
+    text-decoration: none;
+    font-size: 50px;
+   
 }
+
+
+
+
+
+
+
+body{
+
+background-image: url('../image/SVG/gifrating.gif');
+    background-size: 38%;
+     background-position: top;
+   background-attachment: fixed;
+    background-position: center;
+    align-content: center;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 18px;
+
+
+    
+	
+
+
+}
+
 
 input[type="text"] {
     font-size:25px;
@@ -86,6 +116,8 @@ input search{
   width: 200px;
 }
 
+
+
 navbar {
     overflow: auto;
     background-color: #343434;
@@ -97,6 +129,11 @@ navbar {
     font-weight: 600;
     
 
+}
+
+UserRanking
+{
+    
 }
 
 

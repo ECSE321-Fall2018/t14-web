@@ -1,22 +1,33 @@
 <template>
 	<div class ="UserRanking">
 
-		<h1>This page will show all user rankings</h1>
+		<h1>Rankings</h1>
+	&nbsp;
+		<body>Find out who you top drivers, passengers and destinations are.
+		
+		</body>
+		
 	</div>
 
 </template>
 
 <script>
 	export default {
+		name: 'UserRanking'
+		
 		
 	}
+	
+
 </script>
 
 
 
 
 
-
-
-
 </template>
+
+<style>
+
+
+</style>
