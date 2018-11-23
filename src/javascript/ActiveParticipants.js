@@ -3,8 +3,8 @@ import axios from 'axios'
 
 var config = require('../../config')
 
-//var frontendUrl = 'http://' + config.dev.host + ':' + config.dev.port
-//var backendUrl = 'http://' + config.dev.backendHost + ':' + config.dev.backendPort
+var frontendUrl = 'http://' + config.dev.host + ':' + config.dev.port
+var backendUrl = 'http://' + config.dev.backendHost + ':' + config.dev.backendPort
 
 var Axios = axios.create({
 
@@ -102,32 +102,6 @@ getOpenTrips: function () {
 },
 
 
-
-
-   
-       //return this.customers;
-    
-
-
-
-
-/*
-createParticipant: function (participantName) {
-  AXIOS.post(`/participants/`+participantName, {}, {})
-  .then(response => {
-    // JSON responses are automatically parsed.
-    this.participants.push(response.data)
-    this.newParticipant = ''
-    this.errorParticipant = ''
-  })
-  .catch(e => {
-    var errorMsg = e.message
-    console.log(errorMsg)
-    this.errorParticipant = errorMsg
-  });
-  */
-
-
 computed:
 {
   
@@ -158,61 +132,7 @@ beforeMount () {
   this.getOpenTrips();
 }
 
- /*
-    methods: {
-
-      lookupStartingZip: function() {
-        //this.newParticipant = "Found";
-        var vm = this
-        //axios.get('https://karpool-spring-14.herokuapp.com/passengers/' + vm.newParticipant)
-        axios.get('https://karpool-spring-14.herokuapp.com/trips/all')
-        .then(function (response) {
-          var arr = response[0]
-          console.log("wack")
-          console.log(response)
-
-          vm.participantExist = response.status
-
-          
-        
-          //vm.newParticipant = response.data.destination
-          
-        })
-        .catch(function (error) {
-          vm.participantExist = "invalid"
-        })
-      } 
-
-
-
-    },
-*/
 
   }
   
-
-
-
-/*
-methods: {
-  createParticipant: function (participantName) {
-  AXIOS.post(''+participantName, {}, {})
-  .then(response => {
-    // JSON responses are automatically parsed.
-    this.participants.push(response.data)
-    this.newParticipant = ''
-    this.errorParticipant = ''
-  })
-  .catch(e => {
-    var errorMsg = e.message
-    console.log(errorMsg)
-    this.errorParticipant = errorMsg
-  });
-}
-
-
-
-
-  }
-  */
 
