@@ -2,11 +2,13 @@
 <template>
 
 <div id="main">
+	<h1>Drivers</h1>
 
-	Filter: <input type="text" id="filter" v-model="search"/>   
+	 <input type="text" v-model="search" size="60" style="width: 500px; height: 40px;" 
+		placeholder="search active drivers..."  />  
 	
 
-	<button v-on:click="getDrivers(filter)">List Current Active Drivers</button>
+	<button v-on:click="getDrivers(filter)">Go</button>
 	<!--
 	<ul>
 	<li v-for="driver in activeDrivers">
@@ -49,14 +51,17 @@
 
 #customers {
 	position: absolute;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+
 }
 
 #customers td, #customers th {
-    border: 1px solid #ddd;
+    border: transparent;
     padding: 8px;
+	line-height: 100px;
+
 }
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
@@ -67,8 +72,11 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #ffff;
+	border: none;
+
+    color: #a5b1c2;
+	font-size: 38px;
 }
 </style>
 
