@@ -21,7 +21,7 @@ export default {
     return {
       search: '',
       search2: '',
-      search3: '',
+      passengersearch: '',
       activeTrips: [],
       activeDrivers: [],
       activePassengers: [],
@@ -140,7 +140,7 @@ computed:
     filteredPassengers:function()
     {
          var self=this;
-       return this.activePassengers.filter(function(cust){return cust.name.toLowerCase().indexOf(self.search2.toLowerCase())>=0;});
+       return this.activePassengers.filter(function(cust){return cust.name.toLowerCase().indexOf(self.passengersearch.toLowerCase())>=0;});
        //return this.customers;
     },
     filteredTrips: function()
