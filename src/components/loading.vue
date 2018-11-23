@@ -34,7 +34,7 @@ button {
 .loading {
 	width: 100%;
 	height:100%;
-	background: #333;
+	background: #3a3e45;
 	position: fixed;
 	top: 0;
 	left: 0;
