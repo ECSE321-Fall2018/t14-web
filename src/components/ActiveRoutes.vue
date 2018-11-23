@@ -4,12 +4,15 @@
 	<div class="Overview">
 		<!-- <h1>Overview of Passengers and Drivers</h1> -->
 		
+ <h1>Active Trips</h1>
 
 
         <input type="text" placeholder="Search by Destination" v-model="search"/>
 
-        
-        
+
+         <input type="text" v-model="search" size="60" style="width: 500px; height: 40px;" 
+		placeholder="search active routes..."  />  
+
 
 
 		<!-- <span v-if="activeTrips">{{activeTrips}} </span>
@@ -56,12 +59,16 @@
 	position: absolute;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 60%;
+
 }
+
+
 
 #customers td, #customers th {
     border: 1px solid #ddd;
     padding: 8px;
+	
 }
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
@@ -69,11 +76,12 @@
 #customers tr:hover {background-color: #ddd;}
 
 #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    background-color: #0652DD;
     color: white;
+	font-size: 10px
 }
 
 </style>

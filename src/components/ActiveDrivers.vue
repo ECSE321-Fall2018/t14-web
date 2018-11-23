@@ -2,10 +2,18 @@
 <template>
 
 <div id="main">
+	<h1>Drivers</h1>
+
 
 	Filter: <input type="text" id="filter" v-model="search"/>   
 
 	Filter: <input type="text" id="filter2" v-model="search2"/>   
+	 <input type="text" v-model="search" size="60" style="width: 500px; height: 40px;" 
+		placeholder="search active drivers..."  />  
+	
+
+	
+
 	
 
 	<table id="customers">
@@ -57,14 +65,17 @@
 
 #customers {
 	position: absolute;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+
 }
 
 #customers td, #customers th {
-    border: 1px solid #ddd;
+    border: transparent;
     padding: 8px;
+	line-height: 100px;
+
 }
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
@@ -72,11 +83,14 @@
 #customers tr:hover {background-color: #ddd;}
 
 #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    background-color: #0652DD;
+	border: none;
+
     color: white;
+	font-size: 20px;
 }
 </style>
 
