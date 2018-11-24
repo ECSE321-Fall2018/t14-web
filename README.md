@@ -21,7 +21,7 @@
 
 ``` bash
 # VERY IMPORTANT to install bootstrap as certain buttons make use of this
-npm install boostrap-vue
+npm install bootstrap-vue
 
 # install dependencies
 npm install
