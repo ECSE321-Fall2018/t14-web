@@ -63,7 +63,7 @@
 		<tr>
 			<th></th>
 			<th></th>
-		<caption style="align-content: top;">Filter: <input type="text" id="filter2" placeholder="Search Trips" v-model="search2"/></caption>
+		<caption style="align-content: top;">Filter: <input type="text" id="filter2" placeholder="Search Destinations" v-model="search2"/></caption>
 		<th></th>
 			<th></th>
 	</tr>

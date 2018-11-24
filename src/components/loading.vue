@@ -10,6 +10,7 @@ import App from '../App.vue'
 		
 		<p style="font-size: 20px"> the North American Ride Sharing Service </p>
 		
+		
 		<b-btn variant="primary" href="#/main" style="margin-bottom: 170px;">ENTER</b-btn>
 	</div>
 	<div class="loader-frame">
