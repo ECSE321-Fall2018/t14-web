@@ -7,12 +7,12 @@
 ## The Application is comprised of 2 tabs, active and rankings
 
 # Rankings
-*displays the active trips within a given time frame upon input of 2 dates and a button press
-*The rankings of the top drivers, passengers and destinations are presented upon button press for the same time frame
+* displays the active trips within a given time frame upon input of 2 dates and a button press
+* The rankings of the top drivers, passengers and destinations are presented upon button press for the same time frame
 
 # Active
-*displays all active trips, drivers and passengers
-*each table has a dynamic search bar with partial matching to find specific drivers, trip destinations and passengers
+* displays all active trips, drivers and passengers
+* each table has a dynamic search bar with partial matching to find specific drivers, trip destinations and passengers
 
 
 ## Build Setup
