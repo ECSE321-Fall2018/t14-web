@@ -3,21 +3,15 @@
 
 <div id="main">
 
-<!--
-	<b-alert show>Default Alert</b-alert>
-	 <b-alert variant="success" show>Success Alert</b-alert>
-	-->
-
-<b-table striped hover :items="items"></b-table>
-
-
-	Filter: <input type="text" id="filter" placeholder="Search Drivers" v-model="search"/>   
-
-	
 
 	Filter: <input type="text" id="filter3" placeholder="Search Passengers" v-model="passengersearch"/>     
 	
+	Filter: <input type="text" id="filter2" placeholder="Search Trips" v-model="search2"/>
 
+	Filter: <input type="text" id="filter" placeholder="Search Drivers" v-model="search"/>
+
+
+<div class="drivers">
 	<table id="customers">
 	<tr>
 		<th>Name</th>
@@ -34,30 +28,28 @@
 
 	</tr>
 	</table>
+</div>
 
 
 
-
-<table id="customers" style="margin-left:150%;" >
+<div class="passengers">
+<table id="customers" >
 	<tr>
 		<th>Name</th>
 		<th>Email</th>
 		<th>Phone</th>
-		
-		
 	</tr>
 	<tr v-for="passenger in filteredPassengers">
 		<td>{{passenger.name}}</td>
 		<td>{{passenger.email}}</td>
 		<td>{{passenger.phoneNumber}}</td>
-		
-
 	</tr>
 	</table>
+</div>
 
-	Filter: <input type="text" id="filter2" placeholder="Search Trips" v-model="search2"/>
-	<table id="customers" style="margin-top: 50%">
-			<caption>ACTIVE TRIPS</caption>
+<div class="trips">
+	<table id="customers">
+		<caption>ACTIVE TRIPS</caption>
 		<tr>
 	<!--	<th>Driver</th> -->
 		<th>Trip ID</th>
@@ -65,7 +57,9 @@
 		<th>Destination</th>
 		<th>Depart Date</th>
 		<th>Depart Time</th>
+
 		</tr>
+
 		<tr v-for="trip in filteredTrips">
 		<!-- <td>{{trip.driver}}</td> -->
 		<td>{{trip.tripId}}</td>
@@ -76,19 +70,17 @@
 
 
 		</tr>
-		</table>
+	</table>
 
-
-	
-
-
+</div>
 
 
 </div>
 
+
 </template>
 
-<style>
+
 	
 <style>
 	
@@ -116,9 +108,31 @@
     text-align: center;
     background-color: #0652DD;
     border: none;
-   color: white;
-   font-size: 20px;
+   	color: white;
+   	font-size: 25px;
 }
+
+.drivers {
+	position: absolute;
+	left: 900px;
+}
+.passengers {
+	position: absolute;
+	left: -300px;
+
+}
+.trips {
+	position: absolute;
+	left: 300px;
+
+	
+}
+
+
+
+
+
+
 </style>
 
 
@@ -134,11 +148,7 @@
 	
 
 </script>
-<script>
 
-
-	
-</script>
 
 <script src="../javascript/ActiveParticipants.js"></script>
 

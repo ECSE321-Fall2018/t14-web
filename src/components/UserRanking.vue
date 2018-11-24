@@ -5,13 +5,13 @@
 	 
 	<h1>Rankings</h1>
   	
-  	<b-table striped hover: items="activeDrivers"></b-table>
+  	
 	
 <div class="DriverTable">
 	<table id="customers" >
 		<caption>TOP RANKED DRIVERS</caption>
 	<tr>
-		<th>Name</th>
+		<th>Driver</th>
 		<th>Email</th>
 		<th>Phone</th>
 		
@@ -30,7 +30,7 @@
 	<table id="customers" style="margin-top: 75%;">
 		<caption>TOP RANKED PASSENGERS</caption>
 	<tr>
-		<th>Name</th>
+		<th>Passenger</th>
 		<th>Email</th>
 		<th>Phone</th>
 		
@@ -73,31 +73,47 @@
 
 <style>
 	
-.DriverTable {
+#customers {
 	position: absolute;
-top: 50%;
-left: 50%;
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
 }
 
-.PassengerTable {
-	position: absolute;
-top: 50%;
-left: 50%;
+#customers td, #customers th {
+    border: transparent;
+    padding: 8px;
+    line-height: 100px;
+}
 
+#customers tr:nth-child(even){background-color: #f2f2f2;}
 
-	}
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    background-color: #0652DD;
+    border: none;
+    color: white;
+    font-size: 15px;
+}
 
 .RouteTable {
-	
-position: absolute;
-top: 8px;
-left: -700px;
-
+	position: absolute;
+	left: 900px;
+}
+.DriverTable {
+	position: absolute;
+	left: -300px;
 
 }
-
-
-
+.PassengerTable {
+	position: absolute;
+	left: 300px;
+	
+}
 
 
 
