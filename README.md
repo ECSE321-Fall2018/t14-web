@@ -1,13 +1,25 @@
 # KARPÖÖL ![Travis-ci](https://travis-ci.com/ECSE321-Fall2018/t14-web.svg?token=s9wt5vK6yqsBSVx5Xszv&branch=master)
 
 > A Vue.js project
-![Splash](src/img/splash.PNG)
+![Splash](src/img/splash2.PNG)
+
+##The Web Application
+##The Application is comprised of 2 tabs, active and rankings
+
+##Rankings
+*displays the active trips within a given time frame upon input of 2 dates and a button press
+*The rankings of the top drivers, passengers and destinations are presented upon button press for the same time frame
+
+##Active
+*displays all active trips, drivers and passengers
+*each table has a dynamic search bar with partial matching to find specific drivers, trip destinations and passengers
+
+
 ## Build Setup
 
 ``` bash
-# important to install bootstrap as certain buttons make use of this
+# VERY IMPORTANT to install bootstrap as certain buttons make use of this
 npm install boostrap-vue
-
 
 # install dependencies
 npm install
