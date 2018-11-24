@@ -1,7 +1,9 @@
 # KARPÖÖL ![Travis-ci](https://travis-ci.com/ECSE321-Fall2018/t14-web.svg?token=s9wt5vK6yqsBSVx5Xszv&branch=master)
 
-> A Vue.js project
+
 ![Splash](src/img/splash2.PNG)
+> A Vue.js project
+
 
 # The Web Application
 ## The Application is comprised of 2 tabs, active and rankings
