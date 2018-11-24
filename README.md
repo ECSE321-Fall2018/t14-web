@@ -3,14 +3,14 @@
 > A Vue.js project
 ![Splash](src/img/splash2.PNG)
 
-##The Web Application
-##The Application is comprised of 2 tabs, active and rankings
+# The Web Application
+## The Application is comprised of 2 tabs, active and rankings
 
-##Rankings
+# Rankings
 *displays the active trips within a given time frame upon input of 2 dates and a button press
 *The rankings of the top drivers, passengers and destinations are presented upon button press for the same time frame
 
-##Active
+# Active
 *displays all active trips, drivers and passengers
 *each table has a dynamic search bar with partial matching to find specific drivers, trip destinations and passengers
 
