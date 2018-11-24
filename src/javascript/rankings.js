@@ -39,9 +39,8 @@ export default {
 
 
 methods: {
-/**takes a start and end date in the form of a string and calls backend methods to deliver 
-all completed trips in the time frame
-**/
+//takes a start and end date in the form of a string and calls backend methods to deliver 
+//all active trips in the time frame
 getIntervalTrips: function (startDate, endDate) { 
   var vm = this
   this.startDate = startDate
@@ -58,6 +57,21 @@ getIntervalTrips: function (startDate, endDate) {
     for (var i = 0; i < response.data.length; i++) {
       if (response.data[i].tripComplete = true) {
         vm.tripsIn.push(response.data[i])
+
+        //vm.completeDrivers.push(response.data[i].driver.name)
+       //console.log(completeDrivers)
+        /*
+        
+        vm.completeRoutes.push(response.data[i].destination)
+        vm.completePassengers.push(response.data[i].passenger)
+        console.log("boi")
+        console.log(tripsIn)
+        console.log(activeDrivers)
+        console.log(tripDestination)
+        console.log(activePassengers)
+        */
+        
+        
       }
     }
     
@@ -67,7 +81,7 @@ getIntervalTrips: function (startDate, endDate) {
   });
 },
 
-getTopDrivers: function () {
+getTopDrivers: function () { //unable to implmement controller method from backend, not enough testing
   // Initializing participants from backend
     var vm = this
     
@@ -90,7 +104,7 @@ getTopDrivers: function () {
       vm.errorParticipant = e;
     });
 },
-getTopPassengers: function () {
+getTopPassengers: function () { //unable to implmement proper controller method from backend, not enough testing
   // Initializing participants from backend
     var vm = this
     
@@ -113,7 +127,7 @@ getTopPassengers: function () {
       vm.errorParticipant = e;
     });
 },
-getTopDestinations: function () {
+getTopDestinations: function () { //unable to implmement proper controller method from backend, not enough testing
   // Initializing participants from backend
     var vm = this
     

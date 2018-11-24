@@ -8,7 +8,8 @@
 
 <input type="text2" id="q" placeholder="Start Date (YYYYMMDD)" v-model="startDate"/>
 <input type="text2" id="q2" placeholder="End Date (YYYYMMDD)" v-model="endDate"/>
-<button v-on:click="getIntervalTrips(startDate, endDate)">Retrieve Trips</button>
+<button v-on:click="getIntervalTrips(startDate, endDate), getTopPassengers(startDate, endDate), getTopDestinations(startDate,endDate)">Retrieve Trips</button>
+
 
 	
 
