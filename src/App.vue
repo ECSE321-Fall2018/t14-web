@@ -56,7 +56,7 @@ export default {
 
   
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
 
     
 
@@ -118,7 +118,7 @@ navbar {
     top: 0; 
     left: 0;
     width: 100%; 
-    height: 11%;
+    height: 9%;
     font-weight: 600;
     z-index: 100;
 
@@ -132,7 +132,7 @@ navbar a {
     display: inline-block;
     color: #f1f1f1;
     text-align: center;
-    padding: 14px 14px; 
+    padding: 9px 14px; 
     text-decoration: none;
     font-size: 26px;
 }

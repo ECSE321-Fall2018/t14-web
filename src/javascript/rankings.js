@@ -28,27 +28,37 @@ export default {
       tripsIn: [],
       response: [],
       customers: [],
-      startDate: "20181227",
-      endDate: "20190217"
+      startDate: "20180101",
+      endDate: "20190101",
+      completeDrivers: [],
+      completePassengers: [],
+      completeRoutes: []
     }
   },
 
 
 
 methods: {
-
-getIntervalTrips: function (startDate, endDate) {
+/**takes a start and end date in the form of a string and calls backend methods to deliver 
+all completed trips in the time frame
+**/
+getIntervalTrips: function (startDate, endDate) { 
   var vm = this
   this.startDate = startDate
   this.endDate = endDate
   var parameter = 'trips/date/' + startDate+ '/' + endDate
-  console.log(parameter)
+
+  if (vm.tripsIn.length > 0) {
+    vm.tripsIn = []
+  }
   Axios.get(parameter)
   .then(response => {
 
-    console.log(response.data)
+    
     for (var i = 0; i < response.data.length; i++) {
-      vm.tripsIn.push(response.data[i])
+      if (response.data[i].tripComplete = true) {
+        vm.tripsIn.push(response.data[i])
+      }
     }
     
   })
@@ -121,6 +131,23 @@ getTopDestinations: function () {
     .catch(e => {
       vm.errorParticipant = e;
     });
+},
+
+frequency: function(arr) {
+    var a = [], b = [], prev;
+
+    arr.sort();
+    for ( var i = 0; i < arr.length; i++ ) {
+        if ( arr[i] !== prev ) {
+            a.push(arr[i]);
+            b.push(1);
+        } else {
+            b[b.length-1]++;
+        }
+        prev = arr[i];
+    }
+
+    return [a, b];
 },
 
     filteredPassenger: function()

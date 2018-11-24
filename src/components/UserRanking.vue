@@ -5,12 +5,38 @@
 	 
 	<h1>Rankings</h1>
   	
-  	<
-Filter: <input type="text" id="q" placeholder="start" v-model="startDate"/>
-Filter: <input type="text2" id="q2" placeholder="end" v-model="endDate"/>
-<button v-on:click="getIntervalTrips(20180120, 20190217)"></button>
+
+<input type="text2" id="q" placeholder="Start Date (YYYYMMDD)" v-model="startDate"/>
+<input type="text2" id="q2" placeholder="End Date (YYYYMMDD)" v-model="endDate"/>
+<button v-on:click="getIntervalTrips(startDate, endDate)">Retrieve Trips</button>
 
 	
+
+<div class="Trips">
+	<table id="customers" >
+		<caption>ACTIVE TRIPS</caption>
+	<tr>
+		<th>Trip ID</th>
+		<th>Location</th>
+		<th>Destination</th>
+		<th>Depart Date</th>
+		<th>Depart Time</th>
+		
+	</tr>
+	<tr v-for="trip in tripsIn">
+		<td>{{trip.tripId}}</td>
+		<td>{{trip.departureLocation}}</td>
+		<td>{{trip.destination}}</td>
+		<td>{{trip.departureDate}}
+		<td>{{trip.departureTime}}</td>
+
+
+	</tr>
+	<br>
+	</table>
+</div>
+
+
 <div class="DriverTable">
 	<table id="customers" >
 		<caption>TOP RANKED DRIVERS</caption>
@@ -111,22 +137,30 @@ Filter: <input type="text2" id="q2" placeholder="end" v-model="endDate"/>
     background-color: #0652DD;
     border: none;
     color: white;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 .RouteTable {
 	position: absolute;
 	left: 900px;
+	//visibility: hidden;
 }
 .DriverTable {
 	position: absolute;
 	left: -300px;
+	//visibility: hidden;
 
 }
 .PassengerTable {
 	position: absolute;
-	left: 300px;
+	left: 500px;
+	//visibility: hidden;
 	
+}
+.Trips {
+	position: absolute;
+	left: 100px;
+
 }
 
 

@@ -3,18 +3,24 @@
 
 <div id="main">
 
-
+<!--
 	Filter: <input type="text" id="filter3" placeholder="Search Passengers" v-model="passengersearch"/>     
 	
 	Filter: <input type="text" id="filter2" placeholder="Search Trips" v-model="search2"/>
 
-	Filter: <input type="text" id="filter" placeholder="Search Drivers" v-model="search"/>
+	Filter: <input type="text" id="filter" placeholder="Search Drivers" v-model="search"/> -->
 
 
 <div class="drivers">
 	<table id="customers">
 	<tr>
-		<th>Name</th>
+		<th></th>
+		<caption>Filter: <input type="text" id="filter" placeholder="Search Drivers" v-model="search"/></caption>
+		<th></th>
+		<th></th>
+	</tr>
+	<tr>
+		<th>Driver</th>
 		<th>Email</th>
 		<th>Phone</th>
 		<th>Trips</th>
@@ -35,7 +41,12 @@
 <div class="passengers">
 <table id="customers" >
 	<tr>
-		<th>Name</th>
+		<th></th>
+	<caption>Filter: <input type="text" id="filter3" placeholder="Search Passengers" v-model="passengersearch"/> </caption>
+	<th></th>
+</tr>
+	<tr>
+		<th>Passenger</th>
 		<th>Email</th>
 		<th>Phone</th>
 	</tr>
@@ -49,7 +60,13 @@
 
 <div class="trips">
 	<table id="customers">
-		<caption>ACTIVE TRIPS</caption>
+		<tr>
+			<th></th>
+			<th></th>
+		<caption style="align-content: top;">Filter: <input type="text" id="filter2" placeholder="Search Trips" v-model="search2"/></caption>
+		<th></th>
+			<th></th>
+	</tr>
 		<tr>
 	<!--	<th>Driver</th> -->
 		<th>Trip ID</th>
@@ -109,7 +126,7 @@
     background-color: #0652DD;
     border: none;
    	color: white;
-   	font-size: 25px;
+   	font-size: 12px;
 }
 
 .drivers {

@@ -8,9 +8,9 @@ import App from '../App.vue'
 		<img src="../img/logo.png"/>
 		KAR<span>PÖÖL</span>
 		
-		<p style="font-size: 20px"> wesh poto </p>
+		<p style="font-size: 20px"> the North American Ride Sharing Service </p>
 		
-		<b-btn variant="primary" href="#/main">ENTER</b-btn>
+		<b-btn variant="primary" href="#/main" style="margin-bottom: 170px;">ENTER</b-btn>
 	</div>
 	<div class="loader-frame">
 		
