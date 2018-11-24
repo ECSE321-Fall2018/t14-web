@@ -21,18 +21,41 @@ export default {
     return {
       search: '',
       activeTrips: ["Active Trips: "],
-      activeTripsPrice: ["Price: "],
+      topRoutes: [],
       activeDrivers: [],
       tripDestination: [],
       activePassengers: [],
+      tripsIn: [],
       response: [],
-      customers: []
+      customers: [],
+      startDate: "20181227",
+      endDate: "20190217"
     }
   },
 
 
 
 methods: {
+
+getIntervalTrips: function (startDate, endDate) {
+  var vm = this
+  this.startDate = startDate
+  this.endDate = endDate
+  var parameter = 'trips/date/' + startDate+ '/' + endDate
+  console.log(parameter)
+  Axios.get(parameter)
+  .then(response => {
+
+    console.log(response.data)
+    for (var i = 0; i < response.data.length; i++) {
+      vm.tripsIn.push(response.data[i])
+    }
+    
+  })
+  .catch(e => {
+    vm.errorParticipant = e;
+  });
+},
 
 getTopDrivers: function () {
   // Initializing participants from backend
@@ -46,7 +69,6 @@ getTopDrivers: function () {
       for (var i = 0; i < response.data.length; i++) {
         
         vm.activeDrivers.push(response.data[i])
-        console.log(response.data[i])
         
       }
 
@@ -85,21 +107,17 @@ getTopDestinations: function () {
   // Initializing participants from backend
     var vm = this
     
-    Axios.get('trips/destinations/top3')
+    Axios.get('trips/destination/top3')
     .then(response => {
-      if (vm.activePassengers.length > 0) {
-          vm.activePassengers = []
-      }
-      for (var i = 0; i < response.data.length; i++) {
-        
-        vm.activePassengers.push(response.data[i])
-        
-      }
-
       
+      if (vm.topRoutes.length > 0) {
+          vm.topRoutes = []
+      }
+        vm.topRoutes = response.data
+        console.log(reponse.data)
+      })
 
-      
-    })
+
     .catch(e => {
       vm.errorParticipant = e;
     });
@@ -163,6 +181,8 @@ createParticipant: function (participantName) {
 beforeMount () {
   this.getTopPassengers()
   this.getTopDrivers()
+  this.getTopDestinations()
+  
 }
     /*
     methods: {

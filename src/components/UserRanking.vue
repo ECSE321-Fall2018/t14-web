@@ -5,7 +5,11 @@
 	 
 	<h1>Rankings</h1>
   	
-  	
+  	<
+Filter: <input type="text" id="q" placeholder="start" v-model="startDate"/>
+Filter: <input type="text2" id="q2" placeholder="end" v-model="endDate"/>
+<button v-on:click="getIntervalTrips(20180120, 20190217)"></button>
+
 	
 <div class="DriverTable">
 	<table id="customers" >
@@ -50,15 +54,25 @@
 	<table id="customers" style="margin-left:150%;">
 		<caption>TOP RANKED ROUTES</caption>
 	<tr>
+		<th>Rank</th>
 		<th>Destination</th>
-		<th>Frequency</th>
 		
 		
 		
 	</tr>
-	<tr v-for="passenger in activePassengers">
-		<td>{{passenger.name}}</td>
-		<td>{{passenger.email}}</td>
+	<tr v-if="topRoutes">
+		<tr>
+		<td>1</td>
+		<td>{{topRoutes.first}}</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>{{topRoutes.second}}</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>{{topRoutes.third}}</td>
+	</tr>
 	</tr>
 	</table>
 	<br>
