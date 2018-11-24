@@ -1,7 +1,7 @@
 # KARPÖÖL ![Travis-ci](https://travis-ci.com/ECSE321-Fall2018/t14-web.svg?token=s9wt5vK6yqsBSVx5Xszv&branch=master)
 
 > A Vue.js project
-[!Splash](src/img/splash.png)
+[!Splash](src/img/splash.PNG)
 ## Build Setup
 
 ``` bash
