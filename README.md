@@ -5,6 +5,10 @@
 ## Build Setup
 
 ``` bash
+# important to install bootstrap as certain buttons make use of this
+npm install boostrap-vue
+
+
 # install dependencies
 npm install
 
